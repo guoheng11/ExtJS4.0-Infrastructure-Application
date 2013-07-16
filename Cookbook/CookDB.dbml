@@ -1,0 +1,1204 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Cookbook" Class="CookDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=NORW7MERCERS;Initial Catalog=Cookbook;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CookbookConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BusinessUnits" Member="BusinessUnits">
+    <Type Name="BusinessUnit">
+      <Column Name="business_units_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="company_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BusinessUnit_ServiceIDReq" Member="ServiceIDReqs" ThisKey="business_units_id" OtherKey="business_units_id" Type="ServiceIDReq" />
+      <Association Name="BusinessUnit_MISNew" Member="MISNews" ThisKey="business_units_id" OtherKey="business_units_id" Type="MISNew" />
+      <Association Name="Company_BusinessUnit" Member="Company" ThisKey="company_id" OtherKey="company_id" Type="Company" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Companies" Member="Companies">
+    <Type Name="Company">
+      <Column Name="company_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="company_name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="Company_BusinessUnit" Member="BusinessUnits" ThisKey="company_id" OtherKey="company_id" Type="BusinessUnit" />
+      <Association Name="Company_Contact" Member="Contacts" ThisKey="company_id" OtherKey="company_id" Type="Contact" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Applications" Member="Applications">
+    <Type Name="Application">
+      <Column Name="applications_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="base_name" Type="System.String" CanBeNull="false" />
+      <Column Name="Product" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="Division" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="Platform" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectInformation" Member="ProjectInformations">
+    <Type Name="ProjectInformation">
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_number" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="project_name" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="customer_project_number" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="company" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="primary_business_unit" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="additional_business_units" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="rfq_loe_recv_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="quote_loe_due_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="expedite" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="preapproved" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="conference_call" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="linked" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="link_type" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2056)" CanBeNull="true" />
+      <Column Name="project_folder" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="button_uat" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="button_prod" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="access_usan" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="visio_drop" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="project_notes" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="doc_visio" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doc_vui" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doc_other" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="application" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="parm" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="reporting_button" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="reporting_vision" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="reporting_other" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tables_xls_csv" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tables_metafile" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tables_def_file" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tables_usan_update_load" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tables_customer_update_usan_load" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tables_customer_update_load" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="prompts_standard" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="prompts_nlu" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="routing_new_800_nums" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="routing_remove_800_nums" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="routing_redirect_800_nums" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="routing_dap_ss7" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="traffic" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="scraper" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="new_tran_type" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="engine" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="grammars_standard" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="grammars_vxml" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="backoffice_db" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="backoffice_process" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="backoffice_webservices" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="network_file_transfer" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="network_infrastructure" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="host_connectivity" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="host_wsdl" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tnt" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tts" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="speech_rec" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="uui" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="readi800" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="access_usan_user_access" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="nuance_development" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="nuance_ndm" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="service_id" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="biso_approval" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="other" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="requested_uat_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="requested_prod_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="linked_projects" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="locked" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="user_name" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="last_time" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="project_dependencies" Type="System.String" DbType="VarChar(2056)" CanBeNull="true" />
+      <Column Name="quote_loe_issue_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="auth_due_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="auth_recv_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_accepted_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prod_complete_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="current_project_status" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="doc_decommission" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="application_decommission" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="parm_decommission" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="reporting_decommission" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tables_decommission" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="next_steps" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="updated_specs_recv" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="revised_uat_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_acceptance_due" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="soak" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="ProjectInformation_ApplicationReq" Member="ApplicationReqs" ThisKey="project_id" OtherKey="project_id" Type="ApplicationReq" />
+      <Association Name="ProjectInformation_BackofficeDBReq" Member="BackofficeDBReqs" ThisKey="project_id" OtherKey="project_id" Type="BackofficeDBReq" />
+      <Association Name="ProjectInformation_BackofficeProcessReq" Member="BackofficeProcessReqs" ThisKey="project_id" OtherKey="project_id" Type="BackofficeProcessReq" />
+      <Association Name="ProjectInformation_BackofficeWebserviceReq" Member="BackofficeWebserviceReqs" ThisKey="project_id" OtherKey="project_id" Type="BackofficeWebserviceReq" />
+      <Association Name="ProjectInformation_ConfigFileReq" Member="ConfigFileReqs" ThisKey="project_id" OtherKey="project_id" Type="ConfigFileReq" />
+      <Association Name="ProjectInformation_DocumentationReq" Member="DocumentationReqs" ThisKey="project_id" OtherKey="project_id" Type="DocumentationReq" />
+      <Association Name="ProjectInformation_EngineReq" Member="EngineReqs" ThisKey="project_id" OtherKey="project_id" Type="EngineReq" />
+      <Association Name="ProjectInformation_FaxFormReq" Member="FaxFormReqs" ThisKey="project_id" OtherKey="project_id" Type="FaxFormReq" />
+      <Association Name="ProjectInformation_FileXferReq" Member="FileXferReqs" ThisKey="project_id" OtherKey="project_id" Type="FileXferReq" />
+      <Association Name="ProjectInformation_GrammarReq" Member="GrammarReqs" ThisKey="project_id" OtherKey="project_id" Type="GrammarReq" />
+      <Association Name="ProjectInformation_ManagerReq" Member="ManagerReqs" ThisKey="project_id" OtherKey="project_id" Type="ManagerReq" />
+      <Association Name="ProjectInformation_OtherReq" Member="OtherReqs" ThisKey="project_id" OtherKey="project_id" Type="OtherReq" />
+      <Association Name="ProjectInformation_ScraperReq" Member="ScraperReqs" ThisKey="project_id" OtherKey="project_id" Type="ScraperReq" />
+      <Association Name="ProjectInformation_ServiceIDReq" Member="ServiceIDReqs" ThisKey="project_id" OtherKey="project_id" Type="ServiceIDReq" />
+      <Association Name="ProjectInformation_SpeechRecognitionReq" Member="SpeechRecognitionReqs" ThisKey="project_id" OtherKey="project_id" Type="SpeechRecognitionReq" />
+      <Association Name="ProjectInformation_TableReq" Member="TableReqs" ThisKey="project_id" OtherKey="project_id" Type="TableReq" />
+      <Association Name="ProjectInformation_TNTFunctionalityReq" Member="TNTFunctionalityReqs" ThisKey="project_id" OtherKey="project_id" Type="TNTFunctionalityReq" />
+      <Association Name="ProjectInformation_TTSFunctionalityReq" Member="TTSFunctionalityReqs" ThisKey="project_id" OtherKey="project_id" Type="TTSFunctionalityReq" />
+      <Association Name="ProjectInformation_UUIReq" Member="UUIReqs" ThisKey="project_id" OtherKey="project_id" Type="UUIReq" />
+      <Association Name="ProjectInformation_VXMLReq" Member="VXMLReqs" ThisKey="project_id" OtherKey="project_id" Type="VXMLReq" />
+      <Association Name="ProjectInformation_MISNew" Member="MISNews" ThisKey="project_id" OtherKey="project_id" Type="MISNew" />
+      <Association Name="ProjectInformation_MISUpdate" Member="MISUpdates" ThisKey="project_id" OtherKey="project_id" Type="MISUpdate" />
+      <Association Name="ProjectInformation_ProjectContact" Member="ProjectContacts" ThisKey="project_id" OtherKey="project_id" Type="ProjectContact" />
+      <Association Name="ProjectInformation_ProjectStatus" Member="ProjectStatus" ThisKey="project_id" OtherKey="project_id" Type="ProjectStatus" />
+      <Association Name="ProjectInformation_PromptMNumsRequired" Member="PromptMNumsRequireds" ThisKey="project_id" OtherKey="project_id" Type="PromptMNumsRequired" />
+      <Association Name="ProjectInformation_TrafficRequirement" Member="TrafficRequirements" ThisKey="project_id" OtherKey="project_id" Type="TrafficRequirement" />
+      <Association Name="ProjectInformation_HardwareRequirement" Member="HardwareRequirements" ThisKey="project_id" OtherKey="project_id" Type="HardwareRequirement" />
+      <Association Name="ProjectInformation_SystemsAssessment" Member="SystemsAssessments" ThisKey="project_id" OtherKey="project_id" Type="SystemsAssessment" />
+      <Association Name="ProjectInformation_SWDSchedule" Member="SWDSchedules" ThisKey="project_id" OtherKey="project_id" Type="SWDSchedule" />
+      <Association Name="ProjectInformation_PromptDetail" Member="PromptDetails" ThisKey="project_id" OtherKey="project_id" Type="PromptDetail" />
+      <Association Name="ProjectInformation_LinkedProject" Member="LinkedProjects" ThisKey="project_id" OtherKey="project_id" Type="LinkedProject" />
+      <Association Name="ProjectInformation_LinkedProject1" Member="LinkedProjects1" ThisKey="project_id" OtherKey="sub_project_id" Type="LinkedProject" />
+      <Association Name="ProjectInformation_ProdInstallationBuffet" Member="ProdInstallationBuffets" ThisKey="project_id" OtherKey="project_id" Type="ProdInstallationBuffet" />
+      <Association Name="ProjectInformation_ProjectRequirement" Member="ProjectRequirements" ThisKey="project_id" OtherKey="project_id" Type="ProjectRequirement" />
+      <Association Name="ProjectInformation_RoutingRequirement" Member="RoutingRequirements" ThisKey="project_id" OtherKey="project_id" Type="RoutingRequirement" />
+      <Association Name="ProjectInformation_BuffetProjectRequirement" Member="BuffetProjectRequirements" ThisKey="project_id" OtherKey="project_id" Type="BuffetProjectRequirement" />
+      <Association Name="ProjectInformation_StagingFolder" Member="StagingFolders" ThisKey="project_id" OtherKey="project_id" Type="StagingFolder" />
+      <Association Name="ProjectInformation_UatProdInstall" Member="UatProdInstalls" ThisKey="project_id" OtherKey="project_id" Type="UatProdInstall" />
+      <Association Name="ProjectInformation_ProjectDeliverable" Member="ProjectDeliverables" ThisKey="project_id" OtherKey="project_id" Type="ProjectDeliverable" />
+      <Association Name="ProjectInformation_SWDAssessment" Member="SWDAssessments" ThisKey="project_id" OtherKey="project_id" Type="SWDAssessment" />
+      <Association Name="ProjectInformation_PromptWorksheet" Member="PromptWorksheets" ThisKey="project_id" OtherKey="project_id" Type="PromptWorksheet" />
+      <Association Name="ProjectInformation_GMVoicePromptDetail" Member="GMVoicePromptDetails" ThisKey="project_id" OtherKey="project_id" Type="GMVoicePromptDetail" />
+      <Association Name="ProjectInformation_ChangeLog" Member="ChangeLogs" ThisKey="project_id" OtherKey="project_id" Type="ChangeLog" />
+      <Association Name="ProjectInformation_AccessUSANReq" Member="AccessUSANReqs" ThisKey="project_id" OtherKey="project_id" Type="AccessUSANReq" />
+      <Association Name="ProjectInformation_ProjectHistory" Member="ProjectHistories" ThisKey="project_id" OtherKey="project_id" Type="ProjectHistory" />
+      <Association Name="ProjectInformation_ProjectAssumption" Member="ProjectAssumptions" ThisKey="project_id" OtherKey="project_id" Type="ProjectAssumption" />
+      <Association Name="ProjectInformation_RequirementsTabRoutingRequirements" Member="RequirementsTabRoutingRequirements" ThisKey="project_id" OtherKey="project_id" Type="RequirementsTabRoutingRequirements" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ApplicationReq" Member="ApplicationReqs">
+    <Type Name="ApplicationReq">
+      <Column Name="application_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="app_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="rpt_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prm_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prm_instructions" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_ApplicationReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BackofficeDBReq" Member="BackofficeDBReqs">
+    <Type Name="BackofficeDBReq">
+      <Column Name="backofficedb_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="sql_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="instructions" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Association Name="ProjectInformation_BackofficeDBReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BackofficeProcessReq" Member="BackofficeProcessReqs">
+    <Type Name="BackofficeProcessReq">
+      <Column Name="backoffice_process_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="exe_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="config_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="instructions" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Association Name="ProjectInformation_BackofficeProcessReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BackofficeWebserviceReq" Member="BackofficeWebserviceReqs">
+    <Type Name="BackofficeWebserviceReq">
+      <Column Name="backoffice_webservice_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="war_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="tar_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_BackofficeWebserviceReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConfigFileReq" Member="ConfigFileReqs">
+    <Type Name="ConfigFileReq">
+      <Column Name="config_file_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="filename" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="instructions" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_ConfigFileReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentationReq" Member="DocumentationReqs">
+    <Type Name="DocumentationReq">
+      <Column Name="documentation_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="filename" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="latest_version" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_version" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prod_version" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_DocumentationReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EngineReq" Member="EngineReqs">
+    <Type Name="EngineReq">
+      <Column Name="engine_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="exe_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="pdb_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_EngineReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FaxFormReq" Member="FaxFormReqs">
+    <Type Name="FaxFormReq">
+      <Column Name="fax_form_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="filename" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="instructions" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_FaxFormReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FileXferReq" Member="FileXferReqs">
+    <Type Name="FileXferReq">
+      <Column Name="file_xfer_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ndm_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_or_prod" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="upload_or_download" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="protocol" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="timeframe" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="send_site" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="recv_site" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="usan_password" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_FileXferReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GrammarReq" Member="GrammarReqs">
+    <Type Name="GrammarReq">
+      <Column Name="grammar_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="filename" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_GrammarReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ManagerReq" Member="ManagerReqs">
+    <Type Name="ManagerReq">
+      <Column Name="manager_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="exe_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="pdb_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_ManagerReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OtherReq" Member="OtherReqs">
+    <Type Name="OtherReq">
+      <Column Name="other_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="misc" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_OtherReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ScraperReq" Member="ScraperReqs">
+    <Type Name="ScraperReq">
+      <Column Name="scraper_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="exe_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="pdb_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scraper_type_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="new_tran_type" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_ScraperReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+      <Association Name="ScraperType_ScraperReq" Member="ScraperType" ThisKey="scraper_type_id" OtherKey="scraper_type_id" Type="ScraperType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceIDReq" Member="ServiceIDReqs">
+    <Type Name="ServiceIDReq">
+      <Column Name="serviceid_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="product" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="service_id" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="business_units_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="BusinessUnit_ServiceIDReq" Member="BusinessUnit" ThisKey="business_units_id" OtherKey="business_units_id" Type="BusinessUnit" IsForeignKey="true" />
+      <Association Name="ProjectInformation_ServiceIDReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SpeechRecognitionReq" Member="SpeechRecognitionReqs">
+    <Type Name="SpeechRecognitionReq">
+      <Column Name="speech_recognition_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="call_volume" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="language" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_SpeechRecognitionReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TableReq" Member="TableReqs">
+    <Type Name="TableReq">
+      <Column Name="table_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="xls_csv_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="def_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="etm_file" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="table_type" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_load" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prod_load" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_TableReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TNTFunctionalityReq" Member="TNTFunctionalityReqs">
+    <Type Name="TNTFunctionalityReq">
+      <Column Name="tnt_functionality_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="call_volume" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_TNTFunctionalityReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TTSFunctionalityReq" Member="TTSFunctionalityReqs">
+    <Type Name="TTSFunctionalityReq">
+      <Column Name="tts_functionality_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="call_volume" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_TTSFunctionalityReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UUIReq" Member="UUIReqs">
+    <Type Name="UUIReq">
+      <Column Name="uui_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="call_volume" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_UUIReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VXMLReq" Member="VXMLReqs">
+    <Type Name="VXMLReq">
+      <Column Name="vxmlreq_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="filename" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_VXMLReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AssessmentType" Member="AssessmentTypes">
+    <Type Name="AssessmentType">
+      <Column Name="assessment_type_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="AssessmentType_SWDAssessment" Member="SWDAssessments" ThisKey="assessment_type_id" OtherKey="assessment_type_id" Type="SWDAssessment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContactTypes" Member="ContactTypes">
+    <Type Name="ContactType">
+      <Column Name="contact_type_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="ContactType_Contact" Member="Contacts" ThisKey="contact_type_id" OtherKey="contact_type_id" Type="Contact" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MISNew" Member="MISNews">
+    <Type Name="MISNew">
+      <Column Name="mis_new_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="business_units_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="application_group" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="billing_business_unit" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="MISNew_MISNewDelivery" Member="MISNewDeliveries" ThisKey="mis_new_id" OtherKey="mis_new_id" Type="MISNewDelivery" />
+      <Association Name="MISNew_MISNewDistribution" Member="MISNewDistributions" ThisKey="mis_new_id" OtherKey="mis_new_id" Type="MISNewDistribution" />
+      <Association Name="MISNew_MISNewDni" Member="MISNewDnis" ThisKey="mis_new_id" OtherKey="mis_new_id" Type="MISNewDni" />
+      <Association Name="MISNew_MISNewReportName" Member="MISNewReportNames" ThisKey="mis_new_id" OtherKey="mis_new_id" Type="MISNewReportName" />
+      <Association Name="BusinessUnit_MISNew" Member="BusinessUnit" ThisKey="business_units_id" OtherKey="business_units_id" Type="BusinessUnit" IsForeignKey="true" />
+      <Association Name="ProjectInformation_MISNew" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MISNewDelivery" Member="MISNewDeliveries">
+    <Type Name="MISNewDelivery">
+      <Column Name="mis_new_delivery_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mis_new_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="method" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="format" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="frequency" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="MISNew_MISNewDelivery" Member="MISNew" ThisKey="mis_new_id" OtherKey="mis_new_id" Type="MISNew" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MISNewDistribution" Member="MISNewDistributions">
+    <Type Name="MISNewDistribution">
+      <Column Name="mis_new_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="contact_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="add_or_delete" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Association Name="MISNew_MISNewDistribution" Member="MISNew" ThisKey="mis_new_id" OtherKey="mis_new_id" Type="MISNew" IsForeignKey="true" />
+      <Association Name="Contact_MISNewDistribution" Member="Contact" ThisKey="contact_id" OtherKey="contact_id" Type="Contact" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MISNewDnis" Member="MISNewDnis">
+    <Type Name="MISNewDni">
+      <Column Name="mis_new_dnis_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mis_new_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dnis" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="route_to" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="remove_from" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="platform" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="effective_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="reroute_to" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="MISNew_MISNewDni" Member="MISNew" ThisKey="mis_new_id" OtherKey="mis_new_id" Type="MISNew" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MISNewReportName" Member="MISNewReportNames">
+    <Type Name="MISNewReportName">
+      <Column Name="mis_new_report_name_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mis_new_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="report_name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="MISNew_MISNewReportName" Member="MISNew" ThisKey="mis_new_id" OtherKey="mis_new_id" Type="MISNew" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MISUpdates" Member="MISUpdates">
+    <Type Name="MISUpdate">
+      <Column Name="mis_update_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2048) NOT NULL" CanBeNull="false" />
+      <Association Name="MISUpdate_MISUpdateDeliveryChange" Member="MISUpdateDeliveryChanges" ThisKey="mis_update_id" OtherKey="mis_update_id" Type="MISUpdateDeliveryChange" />
+      <Association Name="MISUpdate_MISUpdateDistributionChange" Member="MISUpdateDistributionChanges" ThisKey="mis_update_id" OtherKey="mis_update_id" Type="MISUpdateDistributionChange" />
+      <Association Name="MISUpdate_MISUpdateDNI" Member="MISUpdateDNIs" ThisKey="mis_update_id" OtherKey="mis_update_id" Type="MISUpdateDNI" />
+      <Association Name="MISUpdate_MISUpdateReportName" Member="MISUpdateReportNames" ThisKey="mis_update_id" OtherKey="mis_update_id" Type="MISUpdateReportName" />
+      <Association Name="ProjectInformation_MISUpdate" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MISUpdateDeliveryChange" Member="MISUpdateDeliveryChanges">
+    <Type Name="MISUpdateDeliveryChange">
+      <Column Name="mis_update_delivery_change_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mis_update_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="method" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="format" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="frequency_id" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Association Name="MISUpdate_MISUpdateDeliveryChange" Member="MISUpdate" ThisKey="mis_update_id" OtherKey="mis_update_id" Type="MISUpdate" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MISUpdateDistributionChange" Member="MISUpdateDistributionChanges">
+    <Type Name="MISUpdateDistributionChange">
+      <Column Name="mis_update_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="contact_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="add_or_delete" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Association Name="MISUpdate_MISUpdateDistributionChange" Member="MISUpdate" ThisKey="mis_update_id" OtherKey="mis_update_id" Type="MISUpdate" IsForeignKey="true" />
+      <Association Name="Contact_MISUpdateDistributionChange" Member="Contact" ThisKey="contact_id" OtherKey="contact_id" Type="Contact" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MISUpdateDNIS" Member="MISUpdateDNIs">
+    <Type Name="MISUpdateDNI">
+      <Column Name="mis_updatednis_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mis_update_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dnis" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="route_to" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="remove_from" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="platform" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="effective_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="reroute_to" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="platform_from" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="MISUpdate_MISUpdateDNI" Member="MISUpdate" ThisKey="mis_update_id" OtherKey="mis_update_id" Type="MISUpdate" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MISUpdateReportNames" Member="MISUpdateReportNames">
+    <Type Name="MISUpdateReportName">
+      <Column Name="mis_update_report_names_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mis_update_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="report_name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="MISUpdate_MISUpdateReportName" Member="MISUpdate" ThisKey="mis_update_id" OtherKey="mis_update_id" Type="MISUpdate" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Platform" Member="Platforms">
+    <Type Name="Platform">
+      <Column Name="platform_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="platform" Member="platform1" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectContacts" Member="ProjectContacts">
+    <Type Name="ProjectContact">
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="contact_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(64) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="ProjectInformation_ProjectContact" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+      <Association Name="Contact_ProjectContact" Member="Contact" ThisKey="contact_id" OtherKey="contact_id" Type="Contact" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectStatus" Member="ProjectStatus">
+    <Type Name="ProjectStatus">
+      <Column Name="project_status_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status_type_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="ProjectStatus_ProjectHistory" Member="ProjectHistories" ThisKey="project_status_id" OtherKey="status_id" Type="ProjectHistory" />
+      <Association Name="ProjectInformation_ProjectStatus" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+      <Association Name="StatusType_ProjectStatus" Member="StatusType" ThisKey="status_type_id" OtherKey="status_type_id" Type="StatusType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StatusType" Member="StatusTypes">
+    <Type Name="StatusType">
+      <Column Name="status_type_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="StatusType_ProjectStatus" Member="ProjectStatus" ThisKey="status_type_id" OtherKey="status_type_id" Type="ProjectStatus" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequirementType" Member="RequirementTypes">
+    <Type Name="RequirementType">
+      <Column Name="requirement_type_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="RequirementType_ProjectRequirement" Member="ProjectRequirements" ThisKey="requirement_type_id" OtherKey="requirement_type_id" Type="ProjectRequirement" />
+      <Association Name="RequirementType_BuffetProjectRequirement" Member="BuffetProjectRequirements" ThisKey="requirement_type_id" OtherKey="requirement_type_id" Type="BuffetProjectRequirement" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PromptMNumsRequired" Member="PromptMNumsRequireds">
+    <Type Name="PromptMNumsRequired">
+      <Column Name="promptmnums_required_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="number_prompts" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="language" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="corresponding_language1" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="corresponding_language2" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="corresponding_language3" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="corresponding_language4" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="corresponding_language5" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="corresponding_language6" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="corresponding_language7" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="corresponding_language8" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="corresponding_language9" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="ProjectInformation_PromptMNumsRequired" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ScraperType" Member="ScraperTypes">
+    <Type Name="ScraperType">
+      <Column Name="scraper_type_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="ScraperType_ScraperReq" Member="ScraperReqs" ThisKey="scraper_type_id" OtherKey="scraper_type_id" Type="ScraperReq" />
+      <Association Name="ScraperType_Scraper" Member="Scrapers" ThisKey="scraper_type_id" OtherKey="type" Type="Scraper" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrafficRequirements" Member="TrafficRequirements">
+    <Type Name="TrafficRequirement">
+      <Column Name="traffic_requirements_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="forecast" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="min_month" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="calls_month" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="busy_hour_calls" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="busy_hour_call_percentage" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="avg_call_duration" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="ProjectInformation_TrafficRequirement" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExtdbTables" Member="ExtdbTables">
+    <Type Name="ExtdbTable">
+      <Column Name="extdb_table_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Scrapers" Member="Scrapers">
+    <Type Name="Scraper">
+      <Column Name="scraper_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ScraperType_Scraper" Member="ScraperType" ThisKey="type" OtherKey="scraper_type_id" Type="ScraperType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Engines" Member="Engines">
+    <Type Name="Engine">
+      <Column Name="engine_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Managers" Member="Managers">
+    <Type Name="Manager">
+      <Column Name="manager_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Grammars" Member="Grammars">
+    <Type Name="Grammar">
+      <Column Name="grammar_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="filename" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BackofficeDB" Member="BackofficeDBs">
+    <Type Name="BackofficeDB">
+      <Column Name="backoffice_db_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BackofficeProcess" Member="BackofficeProcesses">
+    <Type Name="BackofficeProcess">
+      <Column Name="backoffice_process_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BackofficeWebService" Member="BackofficeWebServices">
+    <Type Name="BackofficeWebService">
+      <Column Name="backoffice_webservice_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FaxForm" Member="FaxForms">
+    <Type Name="FaxForm">
+      <Column Name="fax_form_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FileXferDownload" Member="FileXferDownloads">
+    <Type Name="FileXferDownload">
+      <Column Name="filexfer_download_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FileXferUpload" Member="FileXferUploads">
+    <Type Name="FileXferUpload">
+      <Column Name="filexfer_upload_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceID" Member="ServiceIDs">
+    <Type Name="ServiceID">
+      <Column Name="serviceid_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TransmissionProtocol" Member="TransmissionProtocols">
+    <Type Name="TransmissionProtocol">
+      <Column Name="transmission_protocol_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TransmissionTimeframe" Member="TransmissionTimeframes">
+    <Type Name="TransmissionTimeframe">
+      <Column Name="transmission_timeframe_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerAppUsanProduct" Member="CustomerAppUsanProducts">
+    <Type Name="CustomerAppUsanProduct">
+      <Column Name="app_product_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConfigurationFile" Member="ConfigurationFiles">
+    <Type Name="ConfigurationFile">
+      <Column Name="configuration_file_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportNames" Member="ReportNames">
+    <Type Name="ReportName">
+      <Column Name="report_name_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeliveryMethods" Member="DeliveryMethods">
+    <Type Name="DeliveryMethod">
+      <Column Name="delivery_method_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="method" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeliveryFormat" Member="DeliveryFormats">
+    <Type Name="DeliveryFormat">
+      <Column Name="delivery_format_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="format" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeliveryFrequency" Member="DeliveryFrequencies">
+    <Type Name="DeliveryFrequency">
+      <Column Name="delivery_frequency_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="frequency" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Languages" Member="Languages">
+    <Type Name="Language">
+      <Column Name="language_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="language" Member="language1" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HardwareRequirements" Member="HardwareRequirements">
+    <Type Name="HardwareRequirement">
+      <Column Name="hardware_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="cost_per_item" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="total_item_cost" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="target_order_date" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="target_delivery" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="actual_order_date" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="actual_delivery_date" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="requirement_type" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="number_of_sites" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ProjectInformation_HardwareRequirement" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemsAssessment" Member="SystemsAssessments">
+    <Type Name="SystemsAssessment">
+      <Column Name="systems_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="contact_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="billed_hours" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="booked_hours" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="target_start" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="target_complete" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="scheduled_start" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="scheduled_complete" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="actual_complete" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Association Name="ProjectInformation_SystemsAssessment" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+      <Association Name="Contact_SystemsAssessment" Member="Contact" ThisKey="contact_id" OtherKey="contact_id" Type="Contact" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SWDSchedule" Member="SWDSchedules">
+    <Type Name="SWDSchedule">
+      <Column Name="swd_schedule_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="scheduled_vendor_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_vendor_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_vendor_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_docs_to_customer" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_docs_to_customer" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_docs_approval" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_docs_approval" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_tls_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_tls_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_tls_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_uat_delivery" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_uat_delivery" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="comments" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="scheduled_systems_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_systems_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_systems_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_ba_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_ba_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_ba_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="target_scripts_ordered" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="target_scripts_delivered" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_scripts_loaded" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_dev_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_qa_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="tls_comments" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="systems_comments" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="billable_pm_hours" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="qa_comments" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="access_usan_comments" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="total_qa_hours" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="total_net_ops_hours" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="net_ops_comments" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="scheduled_dev_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_dev_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="ProjectInformation_SWDSchedule" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PromptDetails" Member="PromptDetails">
+    <Type Name="PromptDetail">
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="language" Type="System.String" DbType="VarChar(64) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="prompts_recorded" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prompts_billed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prompts_provided" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="min_fee" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="num_words" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="order_type" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="recording_sessions" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="recording_studio" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="prompts_converted" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="conversion_sessions" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prompts_digitized" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fee_required" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cd_required" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cd_mailing_address" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="prompt_format" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="needs_approval" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fee_formula" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="setup_fee" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="prompt_fee" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="conversion_setup_fee" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="conversion_prompt_fee" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="fee_min" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="fee_per_word" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="transfer_fee" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="cd_fee" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="total_recording_fee" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="converted_prompt_format" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="ProjectInformation_PromptDetail" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LinkedProjects" Member="LinkedProjects">
+    <Type Name="LinkedProject">
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sub_project_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="associate_or_master" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="usan_ccr" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="ccr" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="maintenance_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="ProjectInformation_LinkedProject" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+      <Association Name="ProjectInformation_LinkedProject1" Member="ProjectInformation1" ThisKey="sub_project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProdInstallationBuffet" Member="ProdInstallationBuffets">
+    <Type Name="ProdInstallationBuffet">
+      <Column Name="prod_installation_buffet_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="conference_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="conference_bridge" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="nodes" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="comments" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="prod_staging_folder" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="vxml_staging_folder" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="uat_staging_folder" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="post_maintenance_notification" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Association Name="ProjectInformation_ProdInstallationBuffet" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectRequirements" Member="ProjectRequirements">
+    <Type Name="ProjectRequirement">
+      <Column Name="project_requirements_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="requirement_type_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(1028)" CanBeNull="true" />
+      <Column Name="filename" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="additional_notes" Type="System.String" DbType="VarChar(1028)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Association Name="ProjectInformation_ProjectRequirement" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+      <Association Name="RequirementType_ProjectRequirement" Member="RequirementType" ThisKey="requirement_type_id" OtherKey="requirement_type_id" Type="RequirementType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RoutingRequirements" Member="RoutingRequirements">
+    <Type Name="RoutingRequirement">
+      <Column Name="routing_requirements_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dnis" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="route_to" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="remove_from" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="platform" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2056)" CanBeNull="true" />
+      <Column Name="alias" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="platform_from" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="usan_date" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="usan_time" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="dnis_date" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="dnis_time" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="carrier_date" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="carrier_time" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Association Name="ProjectInformation_RoutingRequirement" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BuffetProjectRequirements" Member="BuffetProjectRequirements">
+    <Type Name="BuffetProjectRequirement">
+      <Column Name="buffet_project_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="requirement_type_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(1028)" CanBeNull="true" />
+      <Column Name="filename" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="associated_projects" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Association Name="ProjectInformation_BuffetProjectRequirement" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+      <Association Name="RequirementType_BuffetProjectRequirement" Member="RequirementType" ThisKey="requirement_type_id" OtherKey="requirement_type_id" Type="RequirementType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Nodes" Member="Nodes">
+    <Type Name="Node">
+      <Column Name="node_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="node" Member="node1" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StagingFolders" Member="StagingFolders">
+    <Type Name="StagingFolder">
+      <Column Name="staging_folder_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="folder" Type="System.String" DbType="VarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="is_buffet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Association Name="ProjectInformation_StagingFolder" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categories" Member="Categories">
+    <Type Name="Category">
+      <Column Name="category_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="category" Member="category1" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UatProdInstall" Member="UatProdInstalls">
+    <Type Name="UatProdInstall">
+      <Column Name="uat_prod_install_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="uat_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_ccr" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_maintenance_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_conference_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_conference_bridge" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prod_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prod_ccr" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prod_maintenance_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prod_conference_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prod_conference_bridge" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="cpz_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="cpz_ccr" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="cpz_maintenance_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="cpz_conference_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="cpz_conference_bridge" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="wor_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="wor_ccr" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="wor_maintenance_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="wor_conference_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="wor_conference_bridge" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scu_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scu_ccr" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scu_maintenance_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scu_conference_start" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scu_conference_bridge" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="comments" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="prod_usan_ccr" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="wor_usan_ccr" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="cpz_usan_ccr" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scu_usan_ccr" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_usan_ccr" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_node" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="prod_node" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="cpz_node" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="wor_node" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scu_node" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="post_install_notification" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="maintenance_type" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="column1" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="column2" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="column3" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="column4" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_install_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_install_node" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="uat_install_comments" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="prod_post_install_notification" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="prod_install_comments" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_UatProdInstall" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Assumptions" Member="Assumptions">
+    <Type Name="Assumption">
+      <Column Name="assumptions_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="assumption" Member="assumption1" Type="System.String" DbType="VarChar(2048) NOT NULL" CanBeNull="false" />
+      <Column Name="user_name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="business_unit" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="category" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Deliverables" Member="Deliverables">
+    <Type Name="Deliverable">
+      <Column Name="deliverable_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="business_unit" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="category" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="deliverable_text" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectDeliverables" Member="ProjectDeliverables">
+    <Type Name="ProjectDeliverable">
+      <Column Name="project_deliverable_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="category" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="deliverable_text" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_ProjectDeliverable" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_name" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="permission_flag" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="last_time" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="User_EmailTemplate" Member="EmailTemplates" ThisKey="user_id" OtherKey="user_id" Type="EmailTemplate" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmailTemplates" Member="EmailTemplates">
+    <Type Name="EmailTemplate">
+      <Column Name="email_template_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="template_type" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="template_body" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="template_to" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="template_cc" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="template_bcc" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="template_subject" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Association Name="User_EmailTemplate" Member="User" ThisKey="user_id" OtherKey="user_id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SWDAssessment" Member="SWDAssessments">
+    <Type Name="SWDAssessment">
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="contact_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="assessment_type_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="hours" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="action" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="requested_start_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="requested_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_start_date" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="scheduled_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="actual_complete" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="booked_hours" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="swd_assessment_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="AssessmentType_SWDAssessment" Member="AssessmentType" ThisKey="assessment_type_id" OtherKey="assessment_type_id" Type="AssessmentType" IsForeignKey="true" />
+      <Association Name="ProjectInformation_SWDAssessment" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+      <Association Name="Contact_SWDAssessment" Member="Contact" ThisKey="contact_id" OtherKey="contact_id" Type="Contact" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contacts" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="contact_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="company_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="contact_type_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="email1" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="email2" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="Contact_MISNewDistribution" Member="MISNewDistributions" ThisKey="contact_id" OtherKey="contact_id" Type="MISNewDistribution" />
+      <Association Name="Contact_MISUpdateDistributionChange" Member="MISUpdateDistributionChanges" ThisKey="contact_id" OtherKey="contact_id" Type="MISUpdateDistributionChange" />
+      <Association Name="Contact_ProjectContact" Member="ProjectContacts" ThisKey="contact_id" OtherKey="contact_id" Type="ProjectContact" />
+      <Association Name="Contact_SystemsAssessment" Member="SystemsAssessments" ThisKey="contact_id" OtherKey="contact_id" Type="SystemsAssessment" />
+      <Association Name="Contact_SWDAssessment" Member="SWDAssessments" ThisKey="contact_id" OtherKey="contact_id" Type="SWDAssessment" />
+      <Association Name="Company_Contact" Member="Company" ThisKey="company_id" OtherKey="company_id" Type="Company" IsForeignKey="true" />
+      <Association Name="ContactType_Contact" Member="ContactType" ThisKey="contact_type_id" OtherKey="contact_type_id" Type="ContactType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PromptWorksheet" Member="PromptWorksheets">
+    <Type Name="PromptWorksheet">
+      <Column Name="prompt_worksheet_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prompt_worksheet" Type="System.String" DbType="VarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="prompt_summary" Type="System.String" DbType="VarChar(2056)" CanBeNull="true" />
+      <Column Name="po_num" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="great_voice_cd_fee" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="great_voice_total_fee" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="gm_voices_total_fee" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Association Name="ProjectInformation_PromptWorksheet" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GMVoicePromptDetails" Member="GMVoicePromptDetails">
+    <Type Name="GMVoicePromptDetail">
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="language" Type="System.String" DbType="VarChar(64) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="prompts_recorded" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prompts_billed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prompts_provided" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="min_fee" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="num_words" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="order_type" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="recording_sessions" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="recording_studio" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="prompts_converted" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="conversion_sessions" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prompts_digitized" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fee_required" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cd_required" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cd_mailing_address" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="prompt_format" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="needs_approval" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="setup_fee" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="recording1_fee" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="recording3_fee" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="translation_fee" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="delivery_fee" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="total_recording_fee" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="converted_prompt_format" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Association Name="ProjectInformation_GMVoicePromptDetail" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChangeLog" Member="ChangeLogs">
+    <Type Name="ChangeLog">
+      <Column Name="changelog_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2048) NOT NULL" CanBeNull="false" />
+      <Column Name="user_name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="tab" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Association Name="ProjectInformation_ChangeLog" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccessUSANReq" Member="AccessUSANReqs">
+    <Type Name="AccessUSANReq">
+      <Column Name="accessusan_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="login_id" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="table_permission_required" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="report_access_required" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="read_only_permission" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="ProjectInformation_AccessUSANReq" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectHistory" Member="ProjectHistories">
+    <Type Name="ProjectHistory">
+      <Column Name="project_history_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2056) NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="user_name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="status_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ProjectInformation_ProjectHistory" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+      <Association Name="ProjectStatus_ProjectHistory" Member="ProjectStatus" ThisKey="status_id" OtherKey="project_status_id" Type="ProjectStatus" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectAssumptions" Member="ProjectAssumptions">
+    <Type Name="ProjectAssumption">
+      <Column Name="project_assumptions_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="category" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="assumption_text" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="sort_order" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="ProjectInformation_ProjectAssumption" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequirementsTabRoutingRequirements" Member="RequirementsTabRoutingRequirements">
+    <Type Name="RequirementsTabRoutingRequirements">
+      <Column Name="reqtab_routing_req_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="new" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Column Name="notes" Type="System.String" DbType="VarChar(2048)" CanBeNull="true" />
+      <Association Name="ProjectInformation_RequirementsTabRoutingRequirements" Member="ProjectInformation" ThisKey="project_id" OtherKey="project_id" Type="ProjectInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="cookbookConnectionString-Web.config Connection String" description="cookbookConnectionString Connection String used in web.config by the application to access the database." defaultvalue="Data Source=NORW7MERCERS;Initial Catalog=Cookbook;Trusted_Connection=Yes;Persist Security Info=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='cookbookConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="cookbookDEVConnectionString1-Web.config Connection String" description="cookbookDEVConnectionString1 Connection String used in web.config by the application to access the database." defaultvalue="Data Source=NORW7MERCERS;Initial Catalog=Cookbook;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='cookbookDEVConnectionString1']/@connectionString" />
+  </parameter>
+  <parameter name="CookbookConnectionString1-Web.config Connection String" description="CookbookConnectionString1 Connection String used in web.config by the application to access the database." defaultvalue="Data Source=NORW7MERCERS;Initial Catalog=Cookbook;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CookbookConnectionString1']/@connectionString" />
+  </parameter>
+</parameters>

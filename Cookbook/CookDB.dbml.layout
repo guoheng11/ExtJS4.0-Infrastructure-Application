@@ -1,0 +1,1069 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 20.5, 41.75" name="CookDB">
+  <DataContextMoniker Name="/CookDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f999235f-9354-4b59-9f91-4bae1ed3d420" absoluteBounds="2.875, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CookDBDataContext/BusinessUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12095896-2dbf-4529-8102-b303e92d5b03" absoluteBounds="2.8899999999999997, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e8024c6-c7bb-4511-9636-a29d6012c765" absoluteBounds="2.875, 2.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/Company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32cfbd93-3259-4e0e-a7c3-ba57ebb8656c" absoluteBounds="2.8899999999999997, 2.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.09375 : 2.25); (4.09375 : 1.8862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/Company/Company_BusinessUnit" />
+      <nodes>
+        <classShapeMoniker Id="8e8024c6-c7bb-4511-9636-a29d6012c765" />
+        <classShapeMoniker Id="f999235f-9354-4b59-9f91-4bae1ed3d420" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9207e6a0-23d9-458f-ae87-b7aaada98402" absoluteBounds="0.5, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20f6b586-c4c4-4843-863f-f9e32dd98e89" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" absoluteBounds="5.375, 0.5, 3, 17.731915690104167">
+      <DataClassMoniker Name="/CookDBDataContext/ProjectInformation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd94f821-904b-4f37-aa29-bd91dfb41247" absoluteBounds="5.39, 0.96, 2.9699999999999998, 17.171915690104164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87bf113f-ae25-4c5d-9c2a-91dae3d903d7" absoluteBounds="9.25, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CookDBDataContext/ApplicationReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3c08597-3fba-4356-a86f-db04e77e939c" absoluteBounds="9.265, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 1.65199852325605); (9.25 : 1.65199852325605)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ApplicationReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="87bf113f-ae25-4c5d-9c2a-91dae3d903d7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a3fa03fd-3998-4c57-ada3-e3b6fd223fb1" absoluteBounds="9.25, 3.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/BackofficeDBReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b310477f-3194-416d-876d-78bba5af6252" absoluteBounds="9.265, 3.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 4.20274983723958); (9.25 : 4.20274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_BackofficeDBReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="a3fa03fd-3998-4c57-ada3-e3b6fd223fb1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6e34545e-dd4f-4e26-9e30-d0e70d8c349b" absoluteBounds="9.25, 5.125, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/CookDBDataContext/BackofficeProcessReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02b7a21b-bcb6-4e4f-8d46-da4e18b60c5d" absoluteBounds="9.265, 5.585, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 6.1509663929926); (9.25 : 6.1509663929926)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_BackofficeProcessReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="6e34545e-dd4f-4e26-9e30-d0e70d8c349b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="35ae29da-35a9-4810-860d-940d23be2ec3" absoluteBounds="9.25, 7.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/BackofficeWebserviceReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96bcda59-42a5-426d-ad8b-381fa0a8f618" absoluteBounds="9.265, 7.8350000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 8.45274983723958); (9.25 : 8.45274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_BackofficeWebserviceReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="35ae29da-35a9-4810-860d-940d23be2ec3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d6929590-9be3-4e17-96c9-3863a5deae40" absoluteBounds="9.25, 9.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/ConfigFileReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62888157-3fab-4018-93fc-9de0b22bebd6" absoluteBounds="9.265, 10.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 10.7027498372396); (9.25 : 10.7027498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ConfigFileReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="d6929590-9be3-4e17-96c9-3863a5deae40" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="645977b1-6993-4520-a757-b6afc87bcd39" absoluteBounds="9.25, 11.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/DocumentationReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4f04c5b-4af7-41a6-b494-2e45fb742153" absoluteBounds="9.265, 12.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 12.9527498372396); (9.25 : 12.9527498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_DocumentationReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="645977b1-6993-4520-a757-b6afc87bcd39" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="30b1e107-306d-478d-b135-b349f0613b97" absoluteBounds="11.5, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/EngineReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70a1ece1-cffa-4ab8-97cc-bb29972e0b83" absoluteBounds="11.515, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 0.553075923076923); (9.02182592307692 : -0.09375); (10.90625 : -0.09375); (11.3473244349011 : 0.347324434901121 : JumpStart); (11.4651755650989 : 0.465175565098879 : JumpEnd); (11.5 : 0.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_EngineReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="30b1e107-306d-478d-b135-b349f0613b97" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bd0e9dea-2cdc-4338-adfe-61e1829b59e2" absoluteBounds="11.5, 2.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/FaxFormReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66766378-c0ac-4dcd-9762-48a98dd02770" absoluteBounds="11.515, 3.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.875 : 0.5); (6.875 : 0.4375); (8.40724258974359 : 0.437499999999999 : JumpStart); (8.57390925641026 : 0.4375 : JumpEnd); (11.2291666666667 : 0.437499999999999 : JumpStart); (11.3958333333333 : 0.4375 : JumpEnd); (11.4375 : 0.4375); (11.4375 : 3.82774983723958); (11.5 : 3.82774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_FaxFormReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="bd0e9dea-2cdc-4338-adfe-61e1829b59e2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ff939997-7702-49a4-b44f-4700723742d5" absoluteBounds="11.5, 5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/CookDBDataContext/FileXferReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b8cb792-ece3-442f-b521-193623083cbb" absoluteBounds="11.515, 5.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.242191 : 0.5); (8.242191 : 0.392745); (11.34587 : 0.392745); (11.34587 : 6.65465413411458); (11.5 : 6.65465413411458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_FileXferReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="ff939997-7702-49a4-b44f-4700723742d5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e21065da-323b-442c-9155-e54b67ca9062" absoluteBounds="11.5, 8.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CookDBDataContext/GrammarReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b06f33ec-ccf5-4d03-8cf7-59a17ad1e529" absoluteBounds="11.515, 8.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.703122 : 0.5); (5.703122 : -0.25); (11.40625 : -0.25); (11.40625 : 8.96056283723958); (11.5 : 8.96056283723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_GrammarReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="e21065da-323b-442c-9155-e54b67ca9062" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1fc72c82-4199-4d36-acdb-3566569fc238" absoluteBounds="11.5, 10.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/ManagerReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33991417-0ed9-4730-95e2-00b87ef8be93" absoluteBounds="11.515, 10.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.484374 : 0.5); (6.484374 : 0.09375); (7.18229266666667 : 0.0937499999999994 : JumpStart); (7.34895933333333 : 0.09375 : JumpEnd); (8.75099258974359 : 0.0937499999999994 : JumpStart); (8.91765925641025 : 0.09375 : JumpEnd); (11.0104166666667 : 0.0937499999999994 : JumpStart); (11.1770833333333 : 0.09375 : JumpEnd); (11.3125 : 0.09375); (11.3125 : 11.4527498372396); (11.5 : 11.4527498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ManagerReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="1fc72c82-4199-4d36-acdb-3566569fc238" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ab77ccb6-d41d-4a53-98a4-8ef0234afe82" absoluteBounds="11.5, 12.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CookDBDataContext/OtherReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8a07293-5ec9-4da0-9f88-651c6cd635a2" absoluteBounds="11.515, 13.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 16.4551226301287); (11.4010416666667 : 16.4551226301287 : JumpStart); (11.5677083333333 : 16.4551226301287 : JumpEnd); (12.28125 : 16.4551226301287); (12.28125 : 14.3958968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_OtherReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="ab77ccb6-d41d-4a53-98a4-8ef0234afe82" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a35bd29d-5664-4fba-8e73-3ef65db51286" absoluteBounds="13.625, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CookDBDataContext/ScraperReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c3ff680-7eba-4615-94bc-57c66ddd6a2d" absoluteBounds="13.64, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 0.666596461668071); (8.70153846153846 : 0.71875); (11.2625366666667 : 0.718749999999999 : JumpStart); (11.4895833333333 : 0.71875 : JumpEnd); (13.25 : 0.71875); (13.4748934249251 : 0.587562168793674 : JumpStart); (13.6188565750749 : 0.50358366453966 : JumpEnd); (13.625 : 0.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ScraperReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="a35bd29d-5664-4fba-8e73-3ef65db51286" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="891616f9-e7f4-4bc3-b567-a03b4adc13eb" absoluteBounds="13.625, 3.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/ServiceIDReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c4711af3-1302-44c0-905b-9d245d0746d5" absoluteBounds="13.64, 3.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.406252 : 1.8862939453125); (4.406252 : 2.1875); (5.3125 : 2.1875); (5.3125 : 0.15625); (7.18229266666667 : 0.156249999999999 : JumpStart); (7.34895933333333 : 0.15625 : JumpEnd); (7.96354466666667 : 0.156249999999999 : JumpStart); (8.13021133333333 : 0.15625 : JumpEnd); (13.5625 : 0.15625); (13.5625 : 3.82266504358792); (13.625 : 3.82266504358792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/BusinessUnit/BusinessUnit_ServiceIDReq" />
+      <nodes>
+        <classShapeMoniker Id="f999235f-9354-4b59-9f91-4bae1ed3d420" />
+        <classShapeMoniker Id="891616f9-e7f4-4bc3-b567-a03b4adc13eb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.046878 : 0.5); (8.046878 : 0.03125); (13.546875 : 0.03125); (13.546875 : 4.58283435903354); (13.625 : 4.58283435903354)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ServiceIDReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="891616f9-e7f4-4bc3-b567-a03b4adc13eb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6a4c7943-ea70-45f7-95ea-c644e2b9c49e" absoluteBounds="13.625, 5.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CookDBDataContext/SpeechRecognitionReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51a832a8-2565-45a5-a165-3b18240137a2" absoluteBounds="13.64, 5.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.851565 : 0.5); (7.851565 : 0.34); (7.96354466666667 : 0.339999999999999 : JumpStart); (8.13021133333333 : 0.34 : JumpEnd); (8.50474258974359 : 0.339999999999999 : JumpStart); (8.67140925641026 : 0.34 : JumpEnd); (11.2566666666667 : 0.339999999999999 : JumpStart); (11.4895833333333 : 0.34 : JumpEnd); (13.4635416666667 : 0.339999999999999 : JumpStart); (13.6848958333333 : 0.34 : JumpEnd); (15.865 : 0.34); (15.865 : 6.35659912109375); (15.625 : 6.35659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_SpeechRecognitionReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="6a4c7943-ea70-45f7-95ea-c644e2b9c49e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d53000f9-73b6-45f4-87c4-1872c557f64e" absoluteBounds="13.625, 7.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/CookDBDataContext/TableReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c674a35-e0d5-4fd4-a58f-ec04249de18a" absoluteBounds="13.64, 7.9600000000000009, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.093748 : 0.5); (6.093748 : -0.3125); (13.53125 : -0.3125); (13.53125 : 8.96235270182292); (13.625 : 8.96235270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_TableReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="d53000f9-73b6-45f4-87c4-1872c557f64e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7993945b-85c4-4f61-b9ce-e0f46512c472" absoluteBounds="13.625, 10.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CookDBDataContext/TNTFunctionalityReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a02962b2-9919-415e-b4ca-51874456237f" absoluteBounds="13.64, 10.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.656252 : 0.5); (7.656252 : 0.234375); (7.96354466666667 : 0.234374999999999 : JumpStart); (8.13021133333333 : 0.234375 : JumpEnd); (13.6015625 : 0.234375); (13.6015625 : 11.3854484049479); (13.625 : 11.3854484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_TNTFunctionalityReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="7993945b-85c4-4f61-b9ce-e0f46512c472" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="28a86373-31dd-40e1-8d25-9aa8c998eb7d" absoluteBounds="13.625, 12.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CookDBDataContext/TTSFunctionalityReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ada190c6-c937-48b1-9e0c-bf67b0108858" absoluteBounds="13.64, 12.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.265626 : 0.5); (7.265626 : -0.1875); (13.578125 : -0.1875); (13.578125 : 13.2604484049479); (13.625 : 13.2604484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_TTSFunctionalityReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="28a86373-31dd-40e1-8d25-9aa8c998eb7d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ec48ce59-bdb0-4fa2-95b1-72f23a1af8ce" absoluteBounds="13.625, 14.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CookDBDataContext/UUIReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9035bf2a-c87a-473a-b192-a4f3db610618" absoluteBounds="13.64, 14.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 16.310463411308); (11.4010416666667 : 16.310463411308 : JumpStart); (11.5677083333333 : 16.310463411308 : JumpEnd); (12.1979166666667 : 16.310463411308 : JumpStart); (12.3645833333333 : 16.310463411308 : JumpEnd); (15.40625 : 16.310463411308); (15.40625 : 16.0208968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_UUIReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="ec48ce59-bdb0-4fa2-95b1-72f23a1af8ce" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c0b57713-2b57-47cc-be53-9bc9c5b2b8d8" absoluteBounds="9.25, 14.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CookDBDataContext/VXMLReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1576790-bead-4dfb-acf0-e547ed79ad69" absoluteBounds="9.265, 14.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 15.1065991210937); (9.25 : 15.1065991210937)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_VXMLReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="c0b57713-2b57-47cc-be53-9bc9c5b2b8d8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="55519b0a-2686-41b8-ad26-fb10224d5123" absoluteBounds="2.875, 3.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/AssessmentType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c4170ea8-2129-4b07-93ba-374f4b89cc11" absoluteBounds="2.89, 4.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e0adfe6a-1b59-4fa7-9b21-b591825f07e4" absoluteBounds="0.5, 4.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/ContactType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b4d38e3-287b-44ac-acef-88f4bc49fbf6" absoluteBounds="0.51500000000000012, 4.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81851b02-074c-43fa-8b3f-6cc896da4ae9" absoluteBounds="0.5, 9.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CookDBDataContext/MISNew" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31ec4b1f-9853-4cd8-a5bc-7838e25d2458" absoluteBounds="0.51500000000000012, 9.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 1.8862939453125); (3.875 : 2.1875); (2.6875 : 2.1875); (2.6875 : 10.0753471210937); (2.5 : 10.0753471210937)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/BusinessUnit/BusinessUnit_MISNew" />
+      <nodes>
+        <classShapeMoniker Id="f999235f-9354-4b59-9f91-4bae1ed3d420" />
+        <classShapeMoniker Id="81851b02-074c-43fa-8b3f-6cc896da4ae9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.375 : 9.55240237825521); (5.25 : 9.55240237825521); (5.25 : 8.0625); (5.09895833333333 : 8.0625 : JumpStart); (4.93229166666667 : 8.0625 : JumpEnd); (2.86458333333333 : 8.0625 : JumpStart); (2.60416666666667 : 8.0625 : JumpEnd); (2.5625 : 8.0625); (2.5625 : 9.0625); (1.5 : 9.0625); (1.5 : 9.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_MISNew" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="81851b02-074c-43fa-8b3f-6cc896da4ae9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="18b828c2-8939-46c0-af3d-dad0fd2bf1a6" absoluteBounds="0.5, 11.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CookDBDataContext/MISNewDelivery" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0acbd443-b630-4092-b698-0ee3456aed27" absoluteBounds="0.51500000000000012, 11.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 11.0881982421875); (1.5 : 11.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/MISNew/MISNew_MISNewDelivery" />
+      <nodes>
+        <classShapeMoniker Id="81851b02-074c-43fa-8b3f-6cc896da4ae9" />
+        <classShapeMoniker Id="18b828c2-8939-46c0-af3d-dad0fd2bf1a6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4a170696-4067-4b60-93fc-f883d53935d2" absoluteBounds="2.75, 11.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CookDBDataContext/MISNewDistribution" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8dcc3147-2191-4bd4-b4b8-35c3d23470d7" absoluteBounds="2.765, 11.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 11.0881982421875); (2.75 : 11.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/MISNew/MISNew_MISNewDistribution" />
+      <nodes>
+        <classShapeMoniker Id="81851b02-074c-43fa-8b3f-6cc896da4ae9" />
+        <classShapeMoniker Id="4a170696-4067-4b60-93fc-f883d53935d2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1416ed62-545f-44ee-8a60-ad6fd6c6ca32" absoluteBounds="0.5, 13.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CookDBDataContext/MISNewDni" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86f59b20-112e-4c0f-aa6b-3323d46635a8" absoluteBounds="0.51500000000000012, 13.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.20863627929687 : 11.0881982421875); (0.463751194902377 : 11.3459709948949 : JumpStart); (0.229248805097623 : 11.4271222057364 : JumpEnd); (0.125 : 11.4631982421875); (0.125 : 12.7484625384615); (0.249074434901125 : 12.8725369733626 : JumpStart); (0.443925565098876 : 13.0673881035604 : JumpEnd); (0.501537461538462 : 13.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/MISNew/MISNew_MISNewDni" />
+      <nodes>
+        <classShapeMoniker Id="81851b02-074c-43fa-8b3f-6cc896da4ae9" />
+        <classShapeMoniker Id="1416ed62-545f-44ee-8a60-ad6fd6c6ca32" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dd730b10-fb88-4126-afe0-5d2770d2476d" absoluteBounds="2.75, 13, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CookDBDataContext/MISNewReportName" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d3d2016-8569-48a9-853a-d0bd6f82eda6" absoluteBounds="2.765, 13.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.468748 : 11.0881982421875); (1.468748 : 11.1875); (2.5625 : 11.1875); (2.5625 : 13.6931469726562); (2.75 : 13.6931469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/MISNew/MISNew_MISNewReportName" />
+      <nodes>
+        <classShapeMoniker Id="81851b02-074c-43fa-8b3f-6cc896da4ae9" />
+        <classShapeMoniker Id="dd730b10-fb88-4126-afe0-5d2770d2476d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="df5d4fd9-fb6a-46bb-8a1e-6a4a50b1074c" absoluteBounds="3.75, 14.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CookDBDataContext/MISUpdate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0cb34a6-fbdc-496e-be77-bdf893ad3917" absoluteBounds="3.7649999999999997, 15.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 12.1199526891276); (5.140625 : 12.1199526891276); (5.140625 : 14.6015625); (5.2578115 : 14.6015625); (5.2578115 : 14.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_MISUpdate" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="df5d4fd9-fb6a-46bb-8a1e-6a4a50b1074c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7c7b5517-86c4-458c-b3cf-3238347959d8" absoluteBounds="1.75, 16.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CookDBDataContext/MISUpdateDeliveryChange" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1adb20e-094f-47de-be86-3241b00aad8b" absoluteBounds="1.7650000000000001, 16.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 15.3181469726562); (3.125 : 15.3181469726562); (3.125 : 16.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/MISUpdate/MISUpdate_MISUpdateDeliveryChange" />
+      <nodes>
+        <classShapeMoniker Id="df5d4fd9-fb6a-46bb-8a1e-6a4a50b1074c" />
+        <classShapeMoniker Id="7c7b5517-86c4-458c-b3cf-3238347959d8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="58d37e76-b451-40cf-b494-e0dd24d70ab6" absoluteBounds="3.875, 16.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CookDBDataContext/MISUpdateDistributionChange" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8eed716-2a37-492a-b4b9-69b2d26bdb86" absoluteBounds="3.8899999999999997, 16.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.9882790625 : 16.0112939453125); (4.9882790625 : 16.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/MISUpdate/MISUpdate_MISUpdateDistributionChange" />
+      <nodes>
+        <classShapeMoniker Id="df5d4fd9-fb6a-46bb-8a1e-6a4a50b1074c" />
+        <classShapeMoniker Id="58d37e76-b451-40cf-b494-e0dd24d70ab6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ee75e6f6-432d-4790-a8ad-68d5c92cad6c" absoluteBounds="3.75, 19.5, 2, 2.73240397135417">
+      <DataClassMoniker Name="/CookDBDataContext/MISUpdateDNI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d48aaf3-7810-4827-9d6c-9809385cc65c" absoluteBounds="3.7649999999999997, 19.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 15.6959724589844); (3.6875 : 15.6959724589844); (3.6875 : 16.0737939453125); (3.8125 : 16.0737939453125); (3.8125 : 19.40625); (4.75 : 19.40625); (4.75 : 19.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/MISUpdate/MISUpdate_MISUpdateDNI" />
+      <nodes>
+        <classShapeMoniker Id="df5d4fd9-fb6a-46bb-8a1e-6a4a50b1074c" />
+        <classShapeMoniker Id="ee75e6f6-432d-4790-a8ad-68d5c92cad6c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a10554c7-d35f-4752-83f7-bacf46b1ab2a" absoluteBounds="3.875, 18, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CookDBDataContext/MISUpdateReportName" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3b15ecf-f1cf-48d7-b2c9-83be261fc5cb" absoluteBounds="3.8899999999999997, 18.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.2812475 : 16.0112939453125); (4.2812475 : 16.3125); (3.84375 : 16.3125); (3.84375 : 18.6931469726563); (3.875 : 18.6931469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/MISUpdate/MISUpdate_MISUpdateReportName" />
+      <nodes>
+        <classShapeMoniker Id="df5d4fd9-fb6a-46bb-8a1e-6a4a50b1074c" />
+        <classShapeMoniker Id="a10554c7-d35f-4752-83f7-bacf46b1ab2a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9e07be3d-0d7f-47b1-b05f-0a1dc59c3fb2" absoluteBounds="3.125, 10.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/Platform" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee090be0-d4ab-47a7-b50a-bb3554163a04" absoluteBounds="3.14, 10.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bcb43b82-56b8-454d-aa5a-0c0950f14c6a" absoluteBounds="3, 6.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CookDBDataContext/ProjectContact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8aa11d96-7cfa-4bf6-851f-878e6c674b6d" absoluteBounds="3.015, 7.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 7.31814697265625); (5 : 7.31814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ProjectContact" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="bcb43b82-56b8-454d-aa5a-0c0950f14c6a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5fa23ce4-9ee4-46af-b6a6-3472df48b71d" absoluteBounds="0.5, 5.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CookDBDataContext/ProjectStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c11a20a-bb33-4c12-9337-5f9ddb34630a" absoluteBounds="0.51500000000000012, 5.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 5.83214884440104); (5.05208333333333 : 5.83214884440104 : JumpStart); (4.88541666666667 : 5.83214884440104 : JumpEnd); (2.86458333333333 : 5.83214884440104 : JumpStart); (2.69791666666667 : 5.83214884440104 : JumpEnd); (2.5 : 5.83214884440104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ProjectStatus" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="5fa23ce4-9ee4-46af-b6a6-3472df48b71d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4eb007f9-afe2-4d72-9de3-7efe2c5a4bd6" absoluteBounds="0.5, 7.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/StatusType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c2a8775-17dc-43b7-b717-c46377c10ada" absoluteBounds="0.515, 7.7100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 7.25); (1.5 : 7.07859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/StatusType/StatusType_ProjectStatus" />
+      <nodes>
+        <classShapeMoniker Id="4eb007f9-afe2-4d72-9de3-7efe2c5a4bd6" />
+        <classShapeMoniker Id="5fa23ce4-9ee4-46af-b6a6-3472df48b71d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c4888676-3a85-4fd3-ab3b-7463553aafae" absoluteBounds="13.125, 16.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/RequirementType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc3a0afe-69a4-48fb-85f8-d32246975668" absoluteBounds="13.14, 17.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0411ff84-8161-4e1c-8d57-ebc65c5363da" absoluteBounds="11.5, 18.75, 2.25, 3.5016097005208326">
+      <DataClassMoniker Name="/CookDBDataContext/PromptMNumsRequired" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f01b49d1-3564-4a60-a7b0-577338f73967" absoluteBounds="11.515, 19.21, 2.2199999999999998, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.12674596697998 : 18.2319156901042); (6.12674596697998 : 19.1875); (6.52949845090739 : 19.1875 : JumpStart); (6.69616511757405 : 19.1875 : JumpEnd); (6.75270153641765 : 19.1875 : JumpStart); (6.91936820308431 : 19.1875 : JumpEnd); (7.17865619544475 : 19.1875 : JumpStart); (7.34532286211141 : 19.1875 : JumpEnd); (7.38140776896159 : 19.1875 : JumpStart); (7.54807443562825 : 19.1875 : JumpEnd); (7.57484659525554 : 19.1875 : JumpStart); (7.7415132619222 : 19.1875 : JumpEnd); (7.82291666666667 : 19.1875 : JumpStart); (7.98958333333333 : 19.1875 : JumpEnd); (8.01547903971355 : 19.1875 : JumpStart); (8.18214570638021 : 19.1875 : JumpEnd); (11.40625 : 19.1875); (11.40625 : 20.5008048502604); (11.5 : 20.5008048502604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_PromptMNumsRequired" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="0411ff84-8161-4e1c-8d57-ebc65c5363da" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9b433706-73da-4956-b237-cf57ed3ef7fa" absoluteBounds="16, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/ScraperType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b26dc9f2-d81c-4a77-9d01-da6c73e9e66a" absoluteBounds="16.015, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16 : 1.09699625651042); (15.625 : 1.09699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ScraperType/ScraperType_ScraperReq" />
+      <nodes>
+        <classShapeMoniker Id="9b433706-73da-4956-b237-cf57ed3ef7fa" />
+        <classShapeMoniker Id="a35bd29d-5664-4fba-8e73-3ef65db51286" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="189ed68c-9066-47af-88eb-dadc8887077b" absoluteBounds="0.75, 23.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CookDBDataContext/TrafficRequirement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3fec4406-061b-4fc5-90f0-687a02862443" absoluteBounds="0.76500000000000012, 23.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.19762974609375 : 18.2319156901042); (8.19762974609375 : 24.9830172514915); (8.18214570638021 : 24.9830172514915 : JumpStart); (8.01547903971355 : 24.9830172514915 : JumpEnd); (7.98958333333333 : 24.9830172514915 : JumpStart); (7.82291666666667 : 24.9830172514915 : JumpEnd); (2.75 : 24.9830172514915)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_TrafficRequirement" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="189ed68c-9066-47af-88eb-dadc8887077b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="40f38c72-3242-4f84-a544-68a8361c4329" absoluteBounds="3.375, 31.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CookDBDataContext/ExtdbTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb6e4db3-93c2-483d-acd3-edeca337c3a3" absoluteBounds="3.3899999999999997, 32.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19bbb1de-12a2-4045-a5d8-add505cedaa3" absoluteBounds="5.625, 31.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CookDBDataContext/Scraper" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c05bd56-3b71-493e-bb63-78de46743715" absoluteBounds="5.64, 32.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16 : 1.09699625651042); (15.87712 : 1.09699625651042); (15.87712 : 18.66808); (15.04308 : 18.66808); (15.04308 : 28.79308); (13.54308 : 28.79308); (13.54308 : 33.29308); (12.29308 : 33.29308); (12.29308 : 33.3841739453125); (12.20692 : 33.3841739453125); (12.20692 : 33.29308); (7.70692 : 33.29308); (7.70692 : 33.3432139453125); (5.50212 : 33.3432139453125); (5.50212 : 32.5681469726563); (5.625 : 32.5681469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ScraperType/ScraperType_Scraper" />
+      <nodes>
+        <classShapeMoniker Id="9b433706-73da-4956-b237-cf57ed3ef7fa" />
+        <classShapeMoniker Id="19bbb1de-12a2-4045-a5d8-add505cedaa3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d7610ca4-2491-4c78-b815-67da748d40de" absoluteBounds="3.375, 33.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/Engine" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89dea9ca-325e-4ecd-bd86-a36b8102cc08" absoluteBounds="3.39, 33.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc4d8a42-d4c8-49db-8a3b-780d45f2e3e9" absoluteBounds="5.625, 33.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/Manager" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67f67e84-bdd1-4471-be9d-5ac906c8ab5e" absoluteBounds="5.64, 33.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a551b87-3861-4ca7-b782-1427d8391ab5" absoluteBounds="3.375, 34.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CookDBDataContext/Grammar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="56eaa90a-d7ce-4f87-ac80-e3e0aa6e8aa6" absoluteBounds="3.3899999999999997, 35.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60909b43-cdcb-4de1-864c-81bc407a289c" absoluteBounds="5.625, 34.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/BackofficeDB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f25ec9e-c89d-424e-9a77-2baaddb66dd8" absoluteBounds="5.64, 35.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c8509ee-aa68-46e6-9818-88295220398f" absoluteBounds="7.875, 33.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/BackofficeProcess" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da4b7c07-728d-469b-96d0-a9843f07b2ab" absoluteBounds="7.8900000000000006, 33.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4606608f-852f-4782-9b82-edb1cf0c825d" absoluteBounds="7.875, 34.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/BackofficeWebService" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab736bc3-eab1-4a4b-9de0-9c026206dd56" absoluteBounds="7.8900000000000006, 35.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd76faa0-350d-486e-831e-c994bfde8d87" absoluteBounds="3.375, 36.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/FaxForm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b2d2e38-186b-4220-8c4b-4fa056992386" absoluteBounds="3.3899999999999997, 36.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc171057-97b1-456e-8dc5-967830cbb5d2" absoluteBounds="5.625, 36.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/FileXferDownload" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bda92cd6-4d36-4c38-a4c0-fc4549f580ec" absoluteBounds="5.64, 36.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="479a95bf-78c7-4f19-ab03-e215df535b07" absoluteBounds="7.875, 36.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/FileXferUpload" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36a704ba-d8cd-4204-92f1-dad77d1f822c" absoluteBounds="7.8900000000000006, 36.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8859890a-c95d-414a-98b4-895fe5d6b9e0" absoluteBounds="3.375, 37.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/ServiceID" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86b6ab12-9caa-4129-b534-f4c4ce9dc320" absoluteBounds="3.3899999999999997, 37.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45461f0b-0aa5-46d1-a445-f96c31979d8f" absoluteBounds="5.625, 37.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/TransmissionProtocol" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69cc303c-e1d9-43ce-a06a-86d75d47a5bc" absoluteBounds="5.64, 37.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d1d21db-ce2c-479f-9695-c948279a9f2b" absoluteBounds="7.875, 37.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/TransmissionTimeframe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b338bba3-d6de-4837-8ac6-cb81c229548e" absoluteBounds="7.8900000000000006, 37.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70a2fa28-97ea-4bd3-82d8-e2be91a9fb35" absoluteBounds="10.125, 33.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/CustomerAppUsanProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92467210-0136-450c-8abc-04081236744a" absoluteBounds="10.14, 33.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ca78e75-8554-420d-ba78-ec24c4820794" absoluteBounds="10.125, 34.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/ConfigurationFile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a43f350-f48c-433f-a87c-76a837bb701b" absoluteBounds="10.14, 35.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ea07e08-d536-4349-bcf3-7cbb56a76ec4" absoluteBounds="3.375, 38.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/ReportName" />
+      <nestedChildShapes>
+        <elementListCompartment Id="333b8426-55c7-42b4-8b70-c2e887bea256" absoluteBounds="3.3899999999999997, 39.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c3601824-8339-4eeb-958e-985102ae63a7" absoluteBounds="5.625, 38.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/DeliveryMethod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8f94c29-ba7b-4338-ad8a-85a21b918bf1" absoluteBounds="5.64, 39.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c0b26242-5f2e-4a76-bab0-7f6c9f0c1329" absoluteBounds="7.875, 38.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/DeliveryFormat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63b15799-bed5-4a29-b8e4-d8b0099844a8" absoluteBounds="7.8900000000000006, 39.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b232e2e8-bbb6-4ce5-9488-c882e879d3e1" absoluteBounds="3.375, 40.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/DeliveryFrequency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8fc3b90-3f71-4092-bc89-7992b7acebbf" absoluteBounds="3.3899999999999997, 40.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f1b930f5-46e3-46de-993e-72603ca140ae" absoluteBounds="5.625, 40.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/Language" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b85dbd8-029f-406a-acc6-e2685c881f93" absoluteBounds="5.64, 40.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd0f4a94-2f6a-4bbe-a7d9-7ca26cbe3578" absoluteBounds="3.25, 28.25, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/CookDBDataContext/HardwareRequirement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c8335c3-52b4-453c-af92-d3785ec995e5" absoluteBounds="3.2649999999999997, 28.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 13.4037278445638); (5.140625 : 13.4037278445638); (5.140625 : 14.609375); (3.734375 : 14.609375); (3.734375 : 16.234375); (3.859375 : 16.234375); (3.859375 : 19.484375); (3.234375 : 19.484375); (3.234375 : 28.2265625); (4.25 : 28.2265625); (4.25 : 28.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_HardwareRequirement" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="dd0f4a94-2f6a-4bbe-a7d9-7ca26cbe3578" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="148106c9-5803-4483-aa91-16c4c15547d3" absoluteBounds="8.875, 28.875, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/CookDBDataContext/SystemsAssessment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95d64ffd-5d74-4348-87c4-279e40c13fe5" absoluteBounds="8.89, 29.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.61283178424072 : 18.2319156901042); (6.61283178424072 : 21.5); (7.38140776896159 : 21.5 : JumpStart); (7.54807443562825 : 21.5 : JumpEnd); (8.01547903971355 : 21.5 : JumpStart); (8.18214570638021 : 21.5 : JumpEnd); (8.4375 : 21.5); (8.4375 : 30.3373527018229); (8.875 : 30.3373527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_SystemsAssessment" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="148106c9-5803-4483-aa91-16c4c15547d3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="04581b54-5ddb-4ad5-a204-3ab00ab79033" absoluteBounds="6, 25.25, 2, 7.7322412109375023">
+      <DataClassMoniker Name="/CookDBDataContext/SWDSchedule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f3d07f1-2a10-4c81-9384-ed4a38643235" absoluteBounds="6.015, 25.71, 1.9700000000000002, 7.1722412109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.90625 : 18.2319156901042); (7.90625 : 25.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_SWDSchedule" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="04581b54-5ddb-4ad5-a204-3ab00ab79033" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c7f1551a-c023-462f-a844-cc6803060f1a" absoluteBounds="8.75, 19.25, 2.375, 6.3861311848958326">
+      <DataClassMoniker Name="/CookDBDataContext/PromptDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="845335b8-5362-4d36-b9d1-924039570ebb" absoluteBounds="8.765, 19.71, 2.3449999999999998, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.3125 : 18.2319156901042); (8.3125 : 25.0365086257458); (8.35416666666667 : 25.0365086257458 : JumpStart); (8.58333333333333 : 25.0365086257458 : JumpEnd); (8.75 : 25.0365086257458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_PromptDetail" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="c7f1551a-c023-462f-a844-cc6803060f1a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2b612807-7fed-4dc3-ab67-14c5c9fb171a" absoluteBounds="3.25, 20.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CookDBDataContext/LinkedProject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="78f5725a-1e7d-4f30-abf7-8d3ca85928b0" absoluteBounds="3.2649999999999997, 21.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.05923795526123 : 18.2319156901042); (7.05923795526123 : 19.4682139453125); (6.91936820308431 : 19.4682139453125 : JumpStart); (6.75270153641765 : 19.4682139453125 : JumpEnd); (6.69616511757405 : 19.4682139453125 : JumpStart); (6.52949845090739 : 19.4682139453125 : JumpEnd); (6.45312220894368 : 19.4682139453125 : JumpStart); (6.28645554227702 : 19.4682139453125 : JumpEnd); (6.08270833333333 : 19.4682139453125 : JumpStart); (5.91604166666667 : 19.4682139453125 : JumpEnd); (5.83192 : 19.4682139453125); (5.83192 : 19.41808); (3.06462 : 19.41808); (3.06462 : 22.2045485254622); (3.25 : 22.2045485254622)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_LinkedProject" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="2b612807-7fed-4dc3-ab67-14c5c9fb171a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.65817992858887 : 18.2319156901042); (7.65817992858887 : 19.4838389453125); (7.54807443562825 : 19.4838389453125 : JumpStart); (7.38140776896159 : 19.4838389453125 : JumpEnd); (6.91936820308431 : 19.4838389453125 : JumpStart); (6.75270153641765 : 19.4838389453125 : JumpEnd); (6.69616511757405 : 19.4838389453125 : JumpStart); (6.52949845090739 : 19.4838389453125 : JumpEnd); (5.83192 : 19.4838389453125); (5.83192 : 19.41808); (3.12712 : 19.41808); (3.12712 : 21.5085222627311); (3.25 : 21.5085222627311)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_LinkedProject1" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="2b612807-7fed-4dc3-ab67-14c5c9fb171a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="62048934-3f4d-4929-9f6c-3c0a72340e16" absoluteBounds="3.25, 25.125, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/CookDBDataContext/ProdInstallationBuffet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55618c00-4d24-422a-a961-ba607f76d135" absoluteBounds="3.2649999999999997, 25.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.09881237304688 : 18.2319156901042); (8.09881237304688 : 25.15625); (5.25 : 25.15625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ProdInstallationBuffet" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="62048934-3f4d-4929-9f6c-3c0a72340e16" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ec4b65e7-6df2-4c86-bbd5-fd9c8f87746d" absoluteBounds="9.375, 16.625, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/CookDBDataContext/ProjectRequirement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f691bfe-1e3f-4558-8854-27c1fd73f9e1" absoluteBounds="9.39, 17.085, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 17.4284578450521); (9.375 : 17.4284578450521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ProjectRequirement" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="ec4b65e7-6df2-4c86-bbd5-fd9c8f87746d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.125 : 17.4719962565104); (11.5677083333333 : 17.4719962565104 : JumpStart); (11.3854166666667 : 17.4719962565104 : JumpEnd); (11.375 : 17.4719962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/RequirementType/RequirementType_ProjectRequirement" />
+      <nodes>
+        <classShapeMoniker Id="c4888676-3a85-4fd3-ab3b-7463553aafae" />
+        <classShapeMoniker Id="ec4b65e7-6df2-4c86-bbd5-fd9c8f87746d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2ac46a01-2010-41d2-b216-2e9520e2823f" absoluteBounds="1, 19.25, 2, 3.88621256510417">
+      <DataClassMoniker Name="/CookDBDataContext/RoutingRequirement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9439dc11-f254-4494-8fc3-eaf482d405ad" absoluteBounds="1.0150000000000001, 19.71, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 8.26862722281901); (5.015625 : 8.26862722281901); (5.015625 : 10.1038232421875); (2.86458333333333 : 10.1038232421875 : JumpStart); (2.69791666666667 : 10.1038232421875 : JumpEnd); (2.515625 : 10.1038232421875); (2.515625 : 15.96875); (1.734375 : 15.96875); (1.734375 : 19.2265625); (2 : 19.2265625); (2 : 19.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_RoutingRequirement" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="2ac46a01-2010-41d2-b216-2e9520e2823f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e426eabd-b170-4b3e-99d3-333a642583df" absoluteBounds="10.125, 26.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/BuffetProjectRequirement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="372a51b4-a8e0-4ef0-bf40-8b85d307bf70" absoluteBounds="10.14, 26.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.83603486975098 : 18.2319156901042); (6.83603486975098 : 21.25); (8.5 : 21.25); (8.5 : 27.4527498372396); (10.125 : 27.4527498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_BuffetProjectRequirement" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="e426eabd-b170-4b3e-99d3-333a642583df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.8125 : 18.0689925130208); (14.8125 : 27.9655989583333); (12.125 : 27.9655989583333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/RequirementType/RequirementType_BuffetProjectRequirement" />
+      <nodes>
+        <classShapeMoniker Id="c4888676-3a85-4fd3-ab3b-7463553aafae" />
+        <classShapeMoniker Id="e426eabd-b170-4b3e-99d3-333a642583df" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ae5733cd-8984-4f0c-9088-7dae16714608" absoluteBounds="10.125, 36.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/Node" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b6a7663-31ed-4d46-b277-9af8b45521b5" absoluteBounds="10.14, 36.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="091e1667-1f6b-49ee-9673-80a0d248d336" absoluteBounds="12.5, 25.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/CookDBDataContext/StagingFolder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f2036418-bd96-45e4-84c2-e0e2680c8a2c" absoluteBounds="12.515, 25.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.36978887561035 : 18.2319156901042); (6.36978887561035 : 21.375); (6.52949845090739 : 21.375 : JumpStart); (6.69616511757405 : 21.375 : JumpEnd); (7.17865619544475 : 21.375 : JumpStart); (7.34532286211141 : 21.375 : JumpEnd); (7.38140776896159 : 21.375 : JumpStart); (7.54807443562825 : 21.375 : JumpEnd); (7.82291666666667 : 21.375 : JumpStart); (7.98958333333333 : 21.375 : JumpEnd); (8.01547903971355 : 21.375 : JumpStart); (8.28096307942708 : 21.375 : JumpEnd); (8.375 : 21.375); (8.375 : 26.125); (8.41666666666667 : 26.125 : JumpStart); (8.58333333333333 : 26.125 : JumpEnd); (9.38541716666667 : 26.125 : JumpStart); (9.55208383333333 : 26.125 : JumpEnd); (11.4010416666667 : 26.125 : JumpStart); (11.5677083333333 : 26.125 : JumpEnd); (11.875 : 26.125); (11.875 : 25.867188); (12.5 : 25.867188)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_StagingFolder" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="091e1667-1f6b-49ee-9673-80a0d248d336" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="165f5521-3c80-444b-b7d9-e59f67773de0" absoluteBounds="10.125, 37.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CookDBDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="885f3f49-9bf9-4d35-a5cf-89ca5a3d8f72" absoluteBounds="10.14, 37.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c31b2a7-131a-4100-88bd-461cdcf0d987" absoluteBounds="0.75, 26.125, 2, 10.232159830729167">
+      <DataClassMoniker Name="/CookDBDataContext/UatProdInstall" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a3266b3-877e-4089-942b-f57b28c72e84" absoluteBounds="0.76500000000000012, 26.585, 1.9700000000000002, 9.6721598307291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 6.98485206738281); (5.015625 : 6.98485206738281); (5.015625 : 10.1038232421875); (2.86458333333333 : 10.1038232421875 : JumpStart); (2.69791666666667 : 10.1038232421875 : JumpEnd); (2.515625 : 10.1038232421875); (2.515625 : 16.234375); (1.81770833333333 : 16.234375 : JumpStart); (1.65104166666667 : 16.234375 : JumpEnd); (0.734375 : 16.234375); (0.734375 : 26.1015625); (1.75 : 26.1015625); (1.75 : 26.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_UatProdInstall" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="4c31b2a7-131a-4100-88bd-461cdcf0d987" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e7c18b07-25ca-4add-b705-c93f382321ec" absoluteBounds="11.375, 28.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CookDBDataContext/Assumption" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e35fcf2-4d51-4573-8d7e-0bce2ee37883" absoluteBounds="11.39, 29.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c2525516-24e1-4d37-8731-ee88338d5a92" absoluteBounds="13.625, 28.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CookDBDataContext/Deliverable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b7b9d74-04f0-45f0-8e5f-4e55591f6b5f" absoluteBounds="13.64, 29.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91ea9b77-c2c9-4504-b33b-b5b68c325484" absoluteBounds="13.75, 31.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CookDBDataContext/ProjectDeliverable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43395ac4-40ab-407d-a3a5-d20c9c058b46" absoluteBounds="13.765, 31.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 11.8277498372396); (9.234375 : 11.8277498372396); (9.234375 : 9.54612467447917); (11.46875 : 9.54612467447917); (11.46875 : 18.734375); (14.7291666666667 : 18.734375 : JumpStart); (14.8958333333333 : 18.734375 : JumpEnd); (15.109375 : 18.734375); (15.109375 : 28.859375); (15.640625 : 28.859375); (15.640625 : 31.1015625); (14.75 : 31.1015625); (14.75 : 31.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ProjectDeliverable" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="91ea9b77-c2c9-4504-b33b-b5b68c325484" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a71153b1-aabe-49c7-b3af-21743f80f5af" absoluteBounds="12.375, 33.375, 2, 1.770896809895838">
+      <DataClassMoniker Name="/CookDBDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90199540-f045-4501-ab20-306158b9d834" absoluteBounds="12.39, 33.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d267faa-0b27-4b47-ba71-7ecfd92f621c" absoluteBounds="12.5, 35.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CookDBDataContext/EmailTemplate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6880018-1c79-42e4-beb9-4136f07c342a" absoluteBounds="12.515, 35.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.4375 : 35.1458968098958); (13.4375 : 35.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/User/User_EmailTemplate" />
+      <nodes>
+        <classShapeMoniker Id="a71153b1-aabe-49c7-b3af-21743f80f5af" />
+        <classShapeMoniker Id="1d267faa-0b27-4b47-ba71-7ecfd92f621c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="77e91a8d-84c7-4a58-900c-13619f5a8cfb" absoluteBounds="5.75, 21.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/CookDBDataContext/SWDAssessment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76f96221-0f87-4f45-b936-d94d3449d86e" absoluteBounds="5.765, 22.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 4.47980675651042); (4.88541666666667 : 4.47980675651042 : JumpStart); (5.05208333333333 : 4.47980675651042 : JumpEnd); (5.374375 : 4.47980675651042); (5.374375 : 15.0707177734375); (5.999375 : 15.0707177734375); (5.999375 : 21.75); (6.75 : 21.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/AssessmentType/AssessmentType_SWDAssessment" />
+      <nodes>
+        <classShapeMoniker Id="55519b0a-2686-41b8-ad26-fb10224d5123" />
+        <classShapeMoniker Id="77e91a8d-84c7-4a58-900c-13619f5a8cfb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.46474110229492 : 18.2319156901042); (7.46474110229492 : 21.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_SWDAssessment" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="77e91a8d-84c7-4a58-900c-13619f5a8cfb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6779d15e-e63a-4c78-8d5b-9fbb7ce1c320" absoluteBounds="0.5, 2.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CookDBDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19f16677-6ff2-4e28-8038-afd486917351" absoluteBounds="0.515, 3.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 4.92714680989583); (2.78125 : 4.92714680989583); (2.78125 : 11.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/Contact/Contact_MISNewDistribution" />
+      <nodes>
+        <classShapeMoniker Id="6779d15e-e63a-4c78-8d5b-9fbb7ce1c320" />
+        <classShapeMoniker Id="4a170696-4067-4b60-93fc-f883d53935d2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.5 : 4.41710283007813); (0.308 : 4.41710283007813); (0.308 : 16.122); (3.04166666666667 : 16.122 : JumpStart); (3.20833333333333 : 16.122 : JumpEnd); (3.622 : 16.122); (3.622 : 16.1392939453125); (4.539058125 : 16.1392939453125); (4.539058125 : 16.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/Contact/Contact_MISUpdateDistributionChange" />
+      <nodes>
+        <classShapeMoniker Id="6779d15e-e63a-4c78-8d5b-9fbb7ce1c320" />
+        <classShapeMoniker Id="58d37e76-b451-40cf-b494-e0dd24d70ab6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.53449625651042); (4.96875 : 3.53449625651042); (4.96875 : 6.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/Contact/Contact_ProjectContact" />
+      <nodes>
+        <classShapeMoniker Id="6779d15e-e63a-4c78-8d5b-9fbb7ce1c320" />
+        <classShapeMoniker Id="bcb43b82-56b8-454d-aa5a-0c0950f14c6a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.5 : 3.48979941503906); (0.385 : 3.48979941503906); (0.385 : 26.0078011067708); (3.09 : 26.0078011067708); (3.09 : 28.09); (5.84 : 28.09); (5.84 : 25.09); (8.35416666666667 : 25.09 : JumpStart); (8.58333333333333 : 25.09 : JumpEnd); (8.59 : 25.09); (8.59 : 25.7961311848958); (9.4687505 : 25.7961311848958); (9.4687505 : 28.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/Contact/Contact_SystemsAssessment" />
+      <nodes>
+        <classShapeMoniker Id="6779d15e-e63a-4c78-8d5b-9fbb7ce1c320" />
+        <classShapeMoniker Id="148106c9-5803-4483-aa91-16c4c15547d3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.5 : 3.48979941503906); (0.1975 : 3.48979941503906); (0.1975 : 23.3181062825521); (0.301666666666667 : 23.3181062825521 : JumpStart); (0.468333333333333 : 23.3181062825521 : JumpEnd); (5.75 : 23.3181062825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/Contact/Contact_SWDAssessment" />
+      <nodes>
+        <classShapeMoniker Id="6779d15e-e63a-4c78-8d5b-9fbb7ce1c320" />
+        <classShapeMoniker Id="77e91a8d-84c7-4a58-900c-13619f5a8cfb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 3.03449625651042); (2.5 : 3.03449625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/Company/Company_Contact" />
+      <nodes>
+        <classShapeMoniker Id="8e8024c6-c7bb-4511-9636-a29d6012c765" />
+        <classShapeMoniker Id="6779d15e-e63a-4c78-8d5b-9fbb7ce1c320" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 5.56899251302083); (1.5 : 5.81899251302083); (1.5 : 5.81899251302083); (1.5 : 4.97280110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ContactType/ContactType_Contact" />
+      <nodes>
+        <classShapeMoniker Id="e0adfe6a-1b59-4fa7-9b21-b591825f07e4" />
+        <classShapeMoniker Id="6779d15e-e63a-4c78-8d5b-9fbb7ce1c320" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4d8557eb-5f43-40e0-b82d-91c7ef51e282" absoluteBounds="11.5, 22.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CookDBDataContext/PromptWorksheet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55107a5e-419b-4e26-a826-75012e21c51e" absoluteBounds="11.515, 22.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.26198952877808 : 18.2319156901042); (7.26198952877808 : 21.6875); (8.01547903971355 : 21.6875 : JumpStart); (8.18214570638021 : 21.6875 : JumpEnd); (8.35416666666667 : 21.6875 : JumpStart); (8.58333333333333 : 21.6875 : JumpEnd); (8.6875 : 21.6875); (8.6875 : 25.6986311848958); (11.34375 : 25.6986311848958); (11.34375 : 23.4239005533854); (11.5 : 23.4239005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_PromptWorksheet" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="4d8557eb-5f43-40e0-b82d-91c7ef51e282" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5bf265e4-f36c-4cb4-9759-7d20051e733a" absoluteBounds="15.125, 18.75, 2.25, 5.6169254557291657">
+      <DataClassMoniker Name="/CookDBDataContext/GMVoicePromptDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de008ebc-ae26-4deb-b729-983e349b9e34" absoluteBounds="15.14, 19.21, 2.2199999999999998, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 16.1924031049764); (15.77625 : 16.1924031049764); (15.77625 : 18.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_GMVoicePromptDetail" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="5bf265e4-f36c-4cb4-9759-7d20051e733a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="af970233-1861-4f5f-85ab-4dd31c1b368b" absoluteBounds="12.5, 39.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CookDBDataContext/ChangeLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2811ffae-ab82-48c7-ae38-930320299cc7" absoluteBounds="12.515, 39.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 7.30185811511609); (9.21875 : 7.30185811511609); (9.21875 : 9.54612467447917); (11.453125 : 9.54612467447917); (11.453125 : 25.359375); (12.484375 : 25.359375); (12.484375 : 28.859375); (13.390625 : 28.859375); (13.390625 : 33.359375); (14.390625 : 33.359375); (14.390625 : 35.484375); (12.484375 : 35.484375); (12.484375 : 39.1015625); (13.5 : 39.1015625); (13.5 : 39.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ChangeLog" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="af970233-1861-4f5f-85ab-4dd31c1b368b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="273050fc-4c2b-47b7-b9c9-aa764125c967" absoluteBounds="18.25, 13, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/CookDBDataContext/AccessUSANReq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8855356f-9a54-4564-9f57-d1812227e4e0" absoluteBounds="18.265, 13.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 16.341715911308); (11.4010416666667 : 16.341715911308 : JumpStart); (11.5677083333333 : 16.341715911308 : JumpEnd); (12.1979166666667 : 16.341715911308 : JumpStart); (12.3645833333333 : 16.341715911308 : JumpEnd); (15.6929166666667 : 16.341715911308 : JumpStart); (15.9604533333333 : 16.341715911308 : JumpEnd); (16.9166666666667 : 16.341715911308 : JumpStart); (17.0833333333333 : 16.341715911308 : JumpEnd); (19.25 : 16.341715911308); (19.25 : 15.5401025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_AccessUSANReq" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="273050fc-4c2b-47b7-b9c9-aa764125c967" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c0ff1e0c-261e-4d97-a320-b953dbfa7077" absoluteBounds="3, 8.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CookDBDataContext/ProjectHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="393221d0-6c5d-4852-b331-787668402869" absoluteBounds="3.015, 8.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 9.10659912109375); (5 : 9.10659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ProjectHistory" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="c0ff1e0c-261e-4d97-a320-b953dbfa7077" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 6.28929768880208); (2.9375 : 6.28929768880208); (2.9375 : 8.03125); (4 : 8.03125); (4 : 8.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectStatus/ProjectStatus_ProjectHistory" />
+      <nodes>
+        <classShapeMoniker Id="5fa23ce4-9ee4-46af-b6a6-3472df48b71d" />
+        <classShapeMoniker Id="c0ff1e0c-261e-4d97-a320-b953dbfa7077" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fb4c07d5-be0a-4d0f-b451-e10858d3dc79" absoluteBounds="11.25, 31, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CookDBDataContext/ProjectAssumption" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25df1d3f-4121-4454-bc65-8cc21f957ca2" absoluteBounds="11.265, 31.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 2.92737418024782); (9.203125 : 2.92737418024782); (9.203125 : 9.54612467447917); (11.484375 : 9.54612467447917); (11.484375 : 26.359375); (12.140625 : 26.359375); (12.140625 : 28.859375); (11.359375 : 28.859375); (11.359375 : 30.9765625); (12.25 : 30.9765625); (12.25 : 31)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_ProjectAssumption" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="fb4c07d5-be0a-4d0f-b451-e10858d3dc79" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c9ce1593-1ff7-49dc-89c6-fbecdd2248da" absoluteBounds="16, 2, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CookDBDataContext/RequirementsTabRoutingRequirements" />
+      <nestedChildShapes>
+        <elementListCompartment Id="144831ec-e9bf-4906-8d39-c2a60534dc78" absoluteBounds="16.015, 2.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 16.4863751301287); (11.4010416666667 : 16.4863751301287 : JumpStart); (11.5677083333333 : 16.4863751301287 : JumpEnd); (15.6929166666667 : 16.4863751301287 : JumpStart); (15.9604533333333 : 16.4863751301287 : JumpEnd); (17 : 16.4863751301287); (17 : 3.77089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CookDBDataContext/ProjectInformation/ProjectInformation_RequirementsTabRoutingRequirements" />
+      <nodes>
+        <classShapeMoniker Id="31a845d1-47f9-4d2b-ac91-9f8c5366bb4b" />
+        <classShapeMoniker Id="c9ce1593-1ff7-49dc-89c6-fbecdd2248da" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

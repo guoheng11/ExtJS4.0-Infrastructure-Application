@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF2B854E-3891-4F71-BC13-B9D566CB5C35}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cookbook</RootNamespace>
+    <AssemblyName>Cookbook</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <DeployIisAppPath>Default Web Site/Cookbook</DeployIisAppPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\adam.hammad\Documents\ExcelLibrary_DLL_Fixing\ExcelLibrary\bin\Debug\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b9a188c8922137c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WebApplication3\WebApplication3\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcquireProjectLock.ashx.cs">
+      <DependentUpon>AcquireProjectLock.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddAccessUSANAssessment.ashx.cs">
+      <DependentUpon>AddAccessUSANAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddApplications.ashx.cs">
+      <DependentUpon>AddApplications.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddBackofficeDB.ashx.cs">
+      <DependentUpon>AddBackofficeDB.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddBackofficeProcess.ashx.cs">
+      <DependentUpon>AddBackofficeProcess.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddBackofficeWebservice.ashx.cs">
+      <DependentUpon>AddBackofficeWebservice.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddBusinessUnit.ashx.cs">
+      <DependentUpon>AddBusinessUnit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCompany.ashx.cs">
+      <DependentUpon>AddCompany.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddConfigurationFile.ashx.cs">
+      <DependentUpon>AddConfigurationFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddContact.ashx.cs">
+      <DependentUpon>AddContact.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddDeliveryFormat.ashx.cs">
+      <DependentUpon>AddDeliveryFormat.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddDeliveryFrequency.ashx.cs">
+      <DependentUpon>AddDeliveryFrequency.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddDeliveryMethod.ashx.cs">
+      <DependentUpon>AddDeliveryMethod.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddEngine.ashx.cs">
+      <DependentUpon>AddEngine.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddExtdbTable.ashx.cs">
+      <DependentUpon>AddExtdbTable.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddFaxForm.ashx.cs">
+      <DependentUpon>AddFaxForm.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddFileXferDownload.ashx.cs">
+      <DependentUpon>AddFileXferDownload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddFileXferUpload.ashx.cs">
+      <DependentUpon>AddFileXferUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddGrammar.ashx.cs">
+      <DependentUpon>AddGrammar.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddHardwareAssessment.ashx.cs">
+      <DependentUpon>AddHardwareAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddLanguage.ashx.cs">
+      <DependentUpon>AddLanguage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddManager.ashx.cs">
+      <DependentUpon>AddManager.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddPlatform.ashx.cs">
+      <DependentUpon>AddPlatform.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddReportName.ashx.cs">
+      <DependentUpon>AddReportName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddScraper.ashx.cs">
+      <DependentUpon>AddScraper.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddServiceID.ashx.cs">
+      <DependentUpon>AddServiceID.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddStagingFolder.ashx.cs">
+      <DependentUpon>AddStagingFolder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddStatusType.ashx.cs">
+      <DependentUpon>AddStatusType.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddSWDAssessment.ashx.cs">
+      <DependentUpon>AddSWDAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddSystemsAssessment.ashx.cs">
+      <DependentUpon>AddSystemsAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AddTLSAssessment.ashx.cs">
+      <DependentUpon>AddTLSAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Impersonation.cs" />
+    <Compile Include="CommitRFQReportView.ashx.cs">
+      <DependentUpon>CommitRFQReportView.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CookDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CookDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Code\DatabaseHandler.cs" />
+    <Compile Include="CreateIFQ.ashx.cs">
+      <DependentUpon>CreateIFQ.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewProject.ashx.cs">
+      <DependentUpon>CreateNewProject.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteGMVoicePromptDetails.ashx.cs">
+      <DependentUpon>DeleteGMVoicePromptDetails.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteProject.ashx.cs">
+      <DependentUpon>DeleteProject.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DeletePromptDetails.ashx.cs">
+      <DependentUpon>DeletePromptDetails.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportCurrentProject.ashx.cs">
+      <DependentUpon>ExportCurrentProject.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportRFQReportView.ashx.cs">
+      <DependentUpon>ExportRFQReportView.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportRoutingReportView.ashx.cs">
+      <DependentUpon>ExportRoutingReportView.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportTrafficRoutingGrid.ashx.cs">
+      <DependentUpon>ExportTrafficRoutingGrid.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetAccessUSANReqs.ashx.cs">
+      <DependentUpon>GetAccessUSANReqs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetApplicationRequirements.ashx.cs">
+      <DependentUpon>GetApplicationRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetApplications.ashx.cs">
+      <DependentUpon>GetApplications.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetAssumptions.ashx.cs">
+      <DependentUpon>GetAssumptions.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetBackofficeDBRequirements.ashx.cs">
+      <DependentUpon>GetBackofficeDBRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetBackofficeDBs.ashx.cs">
+      <DependentUpon>GetBackofficeDBs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetBackofficeProcesses.ashx.cs">
+      <DependentUpon>GetBackofficeProcesses.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetBackofficeProcessRequirements.ashx.cs">
+      <DependentUpon>GetBackofficeProcessRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetBackofficeWebserviceRequirements.ashx.cs">
+      <DependentUpon>GetBackofficeWebserviceRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetBackofficeWebServices.ashx.cs">
+      <DependentUpon>GetBackofficeWebServices.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetBuffetProdInstallRequirements.ashx.cs">
+      <DependentUpon>GetBuffetProdInstallRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetBusinessUnits.ashx.cs">
+      <DependentUpon>GetBusinessUnits.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\PagedData.cs" />
+    <Compile Include="GetCategories.ashx.cs">
+      <DependentUpon>GetCategories.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetChangeLogs.ashx.cs">
+      <DependentUpon>GetChangeLogs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompanies.ashx.cs">
+      <DependentUpon>GetCompanies.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetConfigFileRequirements.ashx.cs">
+      <DependentUpon>GetConfigFileRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetConfigurationFiles.ashx.cs">
+      <DependentUpon>GetConfigurationFiles.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetContacts.ashx.cs">
+      <DependentUpon>GetContacts.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetContactTypes.ashx.cs">
+      <DependentUpon>GetContactTypes.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetCustomerAppUsanProducts.ashx.cs">
+      <DependentUpon>GetCustomerAppUsanProducts.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetDeliverables.ashx.cs">
+      <DependentUpon>GetDeliverables.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetDeliveryFormats.ashx.cs">
+      <DependentUpon>GetDeliveryFormats.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetDeliveryFrequencies.ashx.cs">
+      <DependentUpon>GetDeliveryFrequencies.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetDeliveryMethods.ashx.cs">
+      <DependentUpon>GetDeliveryMethods.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetDocumentationRequirements.ashx.cs">
+      <DependentUpon>GetDocumentationRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmailRequest.ashx.cs">
+      <DependentUpon>GetEmailRequest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmailTemplates.ashx.cs">
+      <DependentUpon>GetEmailTemplates.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetEngineRequirements.ashx.cs">
+      <DependentUpon>GetEngineRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetEngines.ashx.cs">
+      <DependentUpon>GetEngines.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetExtdbTables.ashx.cs">
+      <DependentUpon>GetExtdbTables.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetFaxFormRequirements.ashx.cs">
+      <DependentUpon>GetFaxFormRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetFaxForms.ashx.cs">
+      <DependentUpon>GetFaxForms.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetFileXferDownloads.ashx.cs">
+      <DependentUpon>GetFileXferDownloads.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetFileXferRequirements.ashx.cs">
+      <DependentUpon>GetFileXferRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetFileXferUploads.ashx.cs">
+      <DependentUpon>GetFileXferUploads.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetGMVoicePromptDetails.ashx.cs">
+      <DependentUpon>GetGMVoicePromptDetails.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetGrammarRequirements.ashx.cs">
+      <DependentUpon>GetGrammarRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetGrammars.ashx.cs">
+      <DependentUpon>GetGrammars.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetHardwareRequirements.ashx.cs">
+      <DependentUpon>GetHardwareRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetLanguages.ashx.cs">
+      <DependentUpon>GetLanguages.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetLinkedProjects.ashx.cs">
+      <DependentUpon>GetLinkedProjects.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetManagerRequirements.ashx.cs">
+      <DependentUpon>GetManagerRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetManagers.ashx.cs">
+      <DependentUpon>GetManagers.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetMISNew.ashx.cs">
+      <DependentUpon>GetMISNew.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetMISNewDelivery.ashx.cs">
+      <DependentUpon>GetMISNewDelivery.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetMISNewDistribution.ashx.cs">
+      <DependentUpon>GetMISNewDistribution.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetMISNewDnis.ashx.cs">
+      <DependentUpon>GetMISNewDnis.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetMISNewReportName.ashx.cs">
+      <DependentUpon>GetMISNewReportName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetMISUpdateDeliveryChanges.ashx.cs">
+      <DependentUpon>GetMISUpdateDeliveryChanges.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetMISUpdateDistributionChange.ashx.cs">
+      <DependentUpon>GetMISUpdateDistributionChange.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetMISUpdateDnis.ashx.cs">
+      <DependentUpon>GetMISUpdateDnis.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetMISUpdateReportNames.ashx.cs">
+      <DependentUpon>GetMISUpdateReportNames.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetMISUpdates.ashx.cs">
+      <DependentUpon>GetMISUpdates.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetNetworkOpsAssessment.ashx.cs">
+      <DependentUpon>GetNetworkOpsAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetNodes.ashx.cs">
+      <DependentUpon>GetNodes.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetOSGAssessment.ashx.cs">
+      <DependentUpon>GetOSGAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetOtherRequirements.ashx.cs">
+      <DependentUpon>GetOtherRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetPlatforms.ashx.cs">
+      <DependentUpon>GetPlatforms.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetProdInstallationBuffet.ashx.cs">
+      <DependentUpon>GetProdInstallationBuffet.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectAssumptions.ashx.cs">
+      <DependentUpon>GetProjectAssumptions.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectContacts.ashx.cs">
+      <DependentUpon>GetProjectContacts.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectDeliverables.ashx.cs">
+      <DependentUpon>GetProjectDeliverables.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectHistory.ashx.cs">
+      <DependentUpon>GetProjectHistory.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectInformation.ashx.cs">
+      <DependentUpon>GetProjectInformation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectInformationVital.ashx.cs">
+      <DependentUpon>GetProjectInformationVital.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectRequirements.ashx.cs">
+      <DependentUpon>GetProjectRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectStatus.ashx.cs">
+      <DependentUpon>GetProjectStatus.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetPromptDetails.ashx.cs">
+      <DependentUpon>GetPromptDetails.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetPromptMNumsRequired.ashx.cs">
+      <DependentUpon>GetPromptMNumsRequired.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetPromptWorksheet.ashx.cs">
+      <DependentUpon>GetPromptWorksheet.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetReportNames.ashx.cs">
+      <DependentUpon>GetReportNames.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetRequirementsTabRoutingRequirements.ashx.cs">
+      <DependentUpon>GetRequirementsTabRoutingRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetRoutingRequirements.ashx.cs">
+      <DependentUpon>GetRoutingRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetScraperRequirements.ashx.cs">
+      <DependentUpon>GetScraperRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetScrapers.ashx.cs">
+      <DependentUpon>GetScrapers.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetScraperTypes.ashx.cs">
+      <DependentUpon>GetScraperTypes.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceIDRequirements.ashx.cs">
+      <DependentUpon>GetServiceIDRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetServiceIDs.ashx.cs">
+      <DependentUpon>GetServiceIDs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSpeechRecognitionRequirements.ashx.cs">
+      <DependentUpon>GetSpeechRecognitionRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetStagingFolders.ashx.cs">
+      <DependentUpon>GetStagingFolders.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetStatusTypes.ashx.cs">
+      <DependentUpon>GetStatusTypes.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSWDAssessment.ashx.cs">
+      <DependentUpon>GetSWDAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSWDSchedule.ashx.cs">
+      <DependentUpon>GetSWDSchedule.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSystemsAssessment.ashx.cs">
+      <DependentUpon>GetSystemsAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetTableRequirements.ashx.cs">
+      <DependentUpon>GetTableRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetTLSAssessment.ashx.cs">
+      <DependentUpon>GetTLSAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetTLSIPAssessment.ashx.cs">
+      <DependentUpon>GetTLSIPAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetTLSSaaSAssessment.ashx.cs">
+      <DependentUpon>GetTLSSaaSAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetTNTFunctionalityRequirements.ashx.cs">
+      <DependentUpon>GetTNTFunctionalityRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetTrafficRequirements.ashx.cs">
+      <DependentUpon>GetTrafficRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetTransmissionProtocols.ashx.cs">
+      <DependentUpon>GetTransmissionProtocols.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetTransmissionTimeframes.ashx.cs">
+      <DependentUpon>GetTransmissionTimeframes.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetTTSFunctionalityRequirements.ashx.cs">
+      <DependentUpon>GetTTSFunctionalityRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetUatProdInstall.ashx.cs">
+      <DependentUpon>GetUatProdInstall.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserName.ashx.cs">
+      <DependentUpon>GetUserName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetUUIRequirements.ashx.cs">
+      <DependentUpon>GetUUIRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetVXMLRequirements.ashx.cs">
+      <DependentUpon>GetVXMLRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Heartbeat.ashx.cs">
+      <DependentUpon>Heartbeat.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RFQReportView.ashx.cs">
+      <DependentUpon>RFQReportView.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReleaseProjectLock.ashx.cs">
+      <DependentUpon>ReleaseProjectLock.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveAccessUSANAssessment.ashx.cs">
+      <DependentUpon>RemoveAccessUSANAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveApplications.ashx.cs">
+      <DependentUpon>RemoveApplications.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveBackofficeDB.ashx.cs">
+      <DependentUpon>RemoveBackofficeDB.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveBackofficeProcess.ashx.cs">
+      <DependentUpon>RemoveBackofficeProcess.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveBackofficeWebservice.ashx.cs">
+      <DependentUpon>RemoveBackofficeWebservice.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveBusinessUnit.ashx.cs">
+      <DependentUpon>RemoveBusinessUnit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveCompany.ashx.cs">
+      <DependentUpon>RemoveCompany.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveConfigurationFile.ashx.cs">
+      <DependentUpon>RemoveConfigurationFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveContact.ashx.cs">
+      <DependentUpon>RemoveContact.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveDeliveryFormat.ashx.cs">
+      <DependentUpon>RemoveDeliveryFormat.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveDeliveryFrequency.ashx.cs">
+      <DependentUpon>RemoveDeliveryFrequency.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveDeliveryMethod.ashx.cs">
+      <DependentUpon>RemoveDeliveryMethod.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveEngine.ashx.cs">
+      <DependentUpon>RemoveEngine.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveExtdbTable.ashx.cs">
+      <DependentUpon>RemoveExtdbTable.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveFaxForm.ashx.cs">
+      <DependentUpon>RemoveFaxForm.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveFileXferDownload.ashx.cs">
+      <DependentUpon>RemoveFileXferDownload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveFileXferUpload.ashx.cs">
+      <DependentUpon>RemoveFileXferUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveGrammar.ashx.cs">
+      <DependentUpon>RemoveGrammar.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveHardwareAssessment.ashx.cs">
+      <DependentUpon>RemoveHardwareAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveLanguage.ashx.cs">
+      <DependentUpon>RemoveLanguage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveManager.ashx.cs">
+      <DependentUpon>RemoveManager.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemovePlatform.ashx.cs">
+      <DependentUpon>RemovePlatform.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveReportName.ashx.cs">
+      <DependentUpon>RemoveReportName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveScraper.ashx.cs">
+      <DependentUpon>RemoveScraper.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveStagingFolder.ashx.cs">
+      <DependentUpon>RemoveStagingFolder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveStatusType.ashx.cs">
+      <DependentUpon>RemoveStatusType.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveSWDAssessment.ashx.cs">
+      <DependentUpon>RemoveSWDAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveSystemsAssessment.ashx.cs">
+      <DependentUpon>RemoveSystemsAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveTLSAssessment.ashx.cs">
+      <DependentUpon>RemoveTLSAssessment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RoutingReportView.ashx.cs">
+      <DependentUpon>RoutingReportView.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="TrafficRoutingUploadDNIS.ashx.cs">
+      <DependentUpon>TrafficRoutingUploadDNIS.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAccessUSANPage.ashx.cs">
+      <DependentUpon>UpdateAccessUSANPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBuffetLinkedClearProjects.ashx.cs">
+      <DependentUpon>UpdateBuffetLinkedClearProjects.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBuffetLinkedProjects.ashx.cs">
+      <DependentUpon>UpdateBuffetLinkedProjects.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBuffetProdInstallPage.ashx.cs">
+      <DependentUpon>UpdateBuffetProdInstallPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBuffetProjectRequirements.ashx.cs">
+      <DependentUpon>UpdateBuffetProjectRequirements.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateGMVoicePromptsPage.ashx.cs">
+      <DependentUpon>UpdateGMVoicePromptsPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMISNewPage.ashx.cs">
+      <DependentUpon>UpdateMISNewPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMISUpdateAddDnis.ashx.cs">
+      <DependentUpon>UpdateMISUpdateAddDnis.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMISUpdateChangeDnises.ashx.cs">
+      <DependentUpon>UpdateMISUpdateChangeDnises.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMISUpdateRemoveDnises.ashx.cs">
+      <DependentUpon>UpdateMISUpdateRemoveDnises.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMISUpdates.ashx.cs">
+      <DependentUpon>UpdateMISUpdates.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateNetworkOpsPage.ashx.cs">
+      <DependentUpon>UpdateNetworkOpsPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProject.ashx.cs">
+      <DependentUpon>UpdateProject.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProjectStatus.ashx.cs">
+      <DependentUpon>UpdateProjectStatus.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePromptsMisc.ashx.cs">
+      <DependentUpon>UpdatePromptsMisc.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePromptsPage.ashx.cs">
+      <DependentUpon>UpdatePromptsPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateQAPage.ashx.cs">
+      <DependentUpon>UpdateQAPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSummaryPage.ashx.cs">
+      <DependentUpon>UpdateSummaryPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSWDPage.ashx.cs">
+      <DependentUpon>UpdateSWDPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSystemsPage.ashx.cs">
+      <DependentUpon>UpdateSystemsPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTLSPage.ashx.cs">
+      <DependentUpon>UpdateTLSPage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTrafficRequirementAddDnises.ashx.cs">
+      <DependentUpon>UpdateTrafficRequirementAddDnises.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTrafficRequirementChangeDnises.ashx.cs">
+      <DependentUpon>UpdateTrafficRequirementChangeDnises.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTrafficRequirementRemoveDnises.ashx.cs">
+      <DependentUpon>UpdateTrafficRequirementRemoveDnises.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTrafficRouting.ashx.cs">
+      <DependentUpon>UpdateTrafficRouting.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateUatProdInstall.ashx.cs">
+      <DependentUpon>UpdateUatProdInstall.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateUATProjReqClearProjects.ashx.cs">
+      <DependentUpon>UpdateUATProjReqClearProjects.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddApplications.ashx" />
+    <Content Include="AddBusinessUnit.ashx" />
+    <Content Include="AddCompany.ashx" />
+    <Content Include="AddContact.ashx" />
+    <Content Include="AddStatusType.ashx" />
+    <Content Include="AddReportName.ashx" />
+    <Content Include="AddExtdbTable.ashx" />
+    <Content Include="AddScraper.ashx" />
+    <Content Include="AddEngine.ashx" />
+    <Content Include="AddManager.ashx" />
+    <Content Include="AddGrammar.ashx" />
+    <Content Include="AddBackofficeDB.ashx" />
+    <Content Include="AddBackofficeProcess.ashx" />
+    <Content Include="AddBackofficeWebservice.ashx" />
+    <Content Include="AddConfigurationFile.ashx" />
+    <Content Include="AddFaxForm.ashx" />
+    <Content Include="AddFileXferUpload.ashx" />
+    <Content Include="AddFileXferDownload.ashx" />
+    <Content Include="AddPlatform.ashx" />
+    <Content Include="AddDeliveryMethod.ashx" />
+    <Content Include="AddDeliveryFormat.ashx" />
+    <Content Include="AddDeliveryFrequency.ashx" />
+    <Content Include="AddLanguage.ashx" />
+    <Content Include="AddStagingFolder.ashx" />
+    <Content Include="AddServiceID.ashx" />
+    <Content Include="AcquireProjectLock.ashx" />
+    <Content Include="AddSWDAssessment.ashx" />
+    <Content Include="AddSystemsAssessment.ashx" />
+    <Content Include="AddHardwareAssessment.ashx" />
+    <Content Include="AddTLSAssessment.ashx" />
+    <Content Include="AddAccessUSANAssessment.ashx" />
+    <Content Include="CommitRFQReportView.ashx" />
+    <None Include="CookDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CookDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="GetBusinessUnits.ashx" />
+    <Content Include="GetApplications.ashx" />
+    <Content Include="GetCompanies.ashx" />
+    <Content Include="GetApplicationRequirements.ashx" />
+    <Content Include="GetBackofficeDBRequirements.ashx" />
+    <Content Include="GetBackofficeProcessRequirements.ashx" />
+    <Content Include="GetBackofficeWebserviceRequirements.ashx" />
+    <Content Include="GetConfigFileRequirements.ashx" />
+    <Content Include="GetDocumentationRequirements.ashx" />
+    <Content Include="GetEngineRequirements.ashx" />
+    <Content Include="GetFaxFormRequirements.ashx" />
+    <Content Include="GetFileXferRequirements.ashx" />
+    <Content Include="GetGrammarRequirements.ashx" />
+    <Content Include="GetManagerRequirements.ashx" />
+    <Content Include="GetOtherRequirements.ashx" />
+    <Content Include="GetScraperRequirements.ashx" />
+    <Content Include="GetServiceIDRequirements.ashx" />
+    <Content Include="GetSpeechRecognitionRequirements.ashx" />
+    <Content Include="GetTableRequirements.ashx" />
+    <Content Include="GetTNTFunctionalityRequirements.ashx" />
+    <Content Include="GetTTSFunctionalityRequirements.ashx" />
+    <Content Include="GetUUIRequirements.ashx" />
+    <Content Include="GetVXMLRequirements.ashx" />
+    <Content Include="GetProjectInformation.ashx" />
+    <Content Include="GetProjectHistory.ashx" />
+    <Content Include="GetStatusTypes.ashx" />
+    <Content Include="GetProjectContacts.ashx" />
+    <Content Include="GetContacts.ashx" />
+    <Content Include="GetLinkedProjects.ashx" />
+    <Content Include="GetProjectStatus.ashx" />
+    <Content Include="GetMISUpdates.ashx" />
+    <Content Include="GetMISUpdateDeliveryChanges.ashx" />
+    <Content Include="GetMISUpdateDnis.ashx" />
+    <Content Include="GetMISUpdateReportNames.ashx" />
+    <Content Include="GetMISUpdateDistributionChange.ashx" />
+    <Content Include="GetTrafficRequirements.ashx" />
+    <Content Include="GetRoutingRequirements.ashx" />
+    <Content Include="GetPromptWorksheet.ashx" />
+    <Content Include="GetPromptMNumsRequired.ashx" />
+    <Content Include="GetPromptDetails.ashx" />
+    <Content Include="GetUatProdInstall.ashx" />
+    <Content Include="GetMISNew.ashx" />
+    <Content Include="GetMISNewDelivery.ashx" />
+    <Content Include="GetMISNewDistribution.ashx" />
+    <Content Include="GetMISNewDnis.ashx" />
+    <Content Include="GetMISNewReportName.ashx" />
+    <Content Include="GetSWDAssessment.ashx" />
+    <Content Include="GetSWDSchedule.ashx" />
+    <Content Include="GetProdInstallationBuffet.ashx" />
+    <Content Include="GetProjectRequirements.ashx" />
+    <Content Include="GetExtdbTables.ashx" />
+    <Content Include="GetScrapers.ashx" />
+    <Content Include="GetEngines.ashx" />
+    <Content Include="GetManagers.ashx" />
+    <Content Include="GetGrammars.ashx" />
+    <Content Include="GetBackofficeDBs.ashx" />
+    <Content Include="GetBackofficeWebServices.ashx" />
+    <Content Include="GetConfigurationFiles.ashx" />
+    <Content Include="GetFaxForms.ashx" />
+    <Content Include="GetFileXferUploads.ashx" />
+    <Content Include="GetFileXferDownloads.ashx" />
+    <Content Include="GetTransmissionProtocols.ashx" />
+    <Content Include="GetTransmissionTimeframes.ashx" />
+    <Content Include="GetCustomerAppUsanProducts.ashx" />
+    <Content Include="GetServiceIDs.ashx" />
+    <Content Include="GetBackofficeProcesses.ashx" />
+    <Content Include="GetHardwareRequirements.ashx" />
+    <Content Include="RemoveApplications.ashx" />
+    <Content Include="RemoveBusinessUnit.ashx" />
+    <Content Include="RemoveCompany.ashx" />
+    <Content Include="RemoveContact.ashx" />
+    <Content Include="RemoveStatusType.ashx" />
+    <Content Include="RemoveExtdbTable.ashx" />
+    <Content Include="RemoveScraper.ashx" />
+    <Content Include="RemoveEngine.ashx" />
+    <Content Include="RemoveManager.ashx" />
+    <Content Include="RemoveGrammar.ashx" />
+    <Content Include="RemoveBackofficeDB.ashx" />
+    <Content Include="RemoveBackofficeProcess.ashx" />
+    <Content Include="RemoveBackofficeWebservice.ashx" />
+    <Content Include="RemoveConfigurationFile.ashx" />
+    <Content Include="RemoveFaxForm.ashx" />
+    <Content Include="RemoveFileXferUpload.ashx" />
+    <Content Include="RemoveFileXferDownload.ashx" />
+    <Content Include="RemovePlatform.ashx" />
+    <Content Include="RemoveReportName.ashx" />
+    <Content Include="RemoveDeliveryMethod.ashx" />
+    <Content Include="RemoveDeliveryFormat.ashx" />
+    <Content Include="RemoveDeliveryFrequency.ashx" />
+    <Content Include="RemoveLanguage.ashx" />
+    <Content Include="GetReportNames.ashx" />
+    <Content Include="GetDeliveryMethods.ashx" />
+    <Content Include="GetDeliveryFormats.ashx" />
+    <Content Include="GetDeliveryFrequencies.ashx" />
+    <Content Include="GetPlatforms.ashx" />
+    <Content Include="GetLanguages.ashx" />
+    <Content Include="GetContactTypes.ashx" />
+    <Content Include="GetScraperTypes.ashx" />
+    <Content Include="GetSystemsAssessment.ashx" />
+    <Content Include="UpdateProject.ashx" />
+    <Content Include="UpdateSummaryPage.ashx" />
+    <Content Include="UpdateProjectStatus.ashx" />
+    <Content Include="UpdatePromptsPage.ashx" />
+    <Content Include="DeletePromptDetails.ashx" />
+    <Content Include="UpdateMISUpdates.ashx" />
+    <Content Include="UpdateMISUpdateRemoveDnises.ashx" />
+    <Content Include="UpdateMISUpdateChangeDnises.ashx" />
+    <Content Include="UpdateMISUpdateAddDnis.ashx" />
+    <Content Include="UpdateBuffetLinkedProjects.ashx" />
+    <Content Include="UpdateBuffetProdInstallPage.ashx" />
+    <Content Include="UpdateSWDPage.ashx" />
+    <Content Include="UpdateSystemsPage.ashx" />
+    <Content Include="UpdateTLSPage.ashx" />
+    <Content Include="UpdateTrafficRouting.ashx" />
+    <Content Include="UpdateBuffetLinkedClearProjects.ashx" />
+    <Content Include="UpdateTrafficRequirementRemoveDnises.ashx" />
+    <Content Include="UpdateTrafficRequirementChangeDnises.ashx" />
+    <Content Include="UpdateTrafficRequirementAddDnises.ashx" />
+    <Content Include="UpdateBuffetProjectRequirements.ashx" />
+    <Content Include="GetBuffetProdInstallRequirements.ashx" />
+    <Content Include="GetNodes.ashx" />
+    <Content Include="GetCategories.ashx" />
+    <Content Include="GetStagingFolders.ashx" />
+    <Content Include="UpdateUatProdInstall.ashx" />
+    <Content Include="RemoveStagingFolder.ashx" />
+    <Content Include="GetAssumptions.ashx" />
+    <Content Include="GetUserName.ashx" />
+    <Content Include="GetProjectAssumptions.ashx" />
+    <Content Include="GetDeliverables.ashx" />
+    <Content Include="GetProjectDeliverables.ashx" />
+    <Content Include="UpdateMISNewPage.ashx" />
+    <Content Include="CreateNewProject.ashx" />
+    <Content Include="UpdatePromptsMisc.ashx" />
+    <Content Include="UpdateUATProjReqClearProjects.ashx" />
+    <Content Include="CreateIFQ.ashx" />
+    <Content Include="ReleaseProjectLock.ashx" />
+    <Content Include="Heartbeat.ashx" />
+    <Content Include="GetEmailRequest.ashx" />
+    <Content Include="GetEmailTemplates.ashx" />
+    <Content Include="GetGMVoicePromptDetails.ashx" />
+    <Content Include="DeleteGMVoicePromptDetails.ashx" />
+    <Content Include="UpdateGMVoicePromptsPage.ashx" />
+    <Content Include="GetChangeLogs.ashx" />
+    <Content Include="RemoveSWDAssessment.ashx" />
+    <Content Include="RemoveSystemsAssessment.ashx" />
+    <Content Include="RemoveHardwareAssessment.ashx" />
+    <Content Include="RemoveTLSAssessment.ashx" />
+    <Content Include="ExportCurrentProject.ashx" />
+    <Content Include="UpdateQAPage.ashx" />
+    <Content Include="RemoveAccessUSANAssessment.ashx" />
+    <Content Include="GetAccessUSANReqs.ashx" />
+    <Content Include="UpdateAccessUSANPage.ashx" />
+    <Content Include="TrafficRoutingUploadDNIS.ashx" />
+    <Content Include="ExportTrafficRoutingGrid.ashx" />
+    <Content Include="GetProjectInformationVital.ashx" />
+    <Content Include="UpdateNetworkOpsPage.ashx" />
+    <Content Include="RFQReportView.ashx" />
+    <Content Include="ExportRFQReportView.ashx" />
+    <Content Include="GetTLSAssessment.ashx" />
+    <Content Include="GetNetworkOpsAssessment.ashx" />
+    <Content Include="GetOSGAssessment.ashx" />
+    <Content Include="GetTLSIPAssessment.ashx" />
+    <Content Include="GetTLSSaaSAssessment.ashx" />
+    <Content Include="RoutingReportView.ashx" />
+    <Content Include="ExportRoutingReportView.ashx" />
+    <Content Include="DeleteProject.ashx" />
+    <Content Include="GetRequirementsTabRoutingRequirements.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CookDB.dbml.layout">
+      <DependentUpon>CookDB.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51552</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8666/ExperimentalCookbook2</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

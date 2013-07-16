@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>CookBook</title>
+		<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+		<link rel="stylesheet" type="text/css" href="css/Cookbook.css">
+		<script type="text/javascript" src="extjs/ext.js"></script>
+	<!--<script type="text/javascript" src="extjs/ext-debug.js"></script>-->
+		<script type="text/javascript" src="CookBook.js"></script>
+	</head>
+	<body>
+		<div id="cookbook"></div>
+	</body>
+
+	<div id="loading-mask"></div>
+	<div id="loading">
+	  <div class="loading-indicator">
+		Loading... Please wait.
+	  </div>
+	</div>
+
+</html>

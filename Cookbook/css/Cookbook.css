@@ -1,0 +1,279 @@
+body{
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size:12px;
+    color:#333;
+    margin:0;
+    padding:0;
+}
+h1{
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size:30px;
+    color:#083772;
+    letter-spacing:-1px;
+    font-weight:normal;
+    /*background:#eee;
+    */
+    padding:20px 25px;
+    /*border-bottom:1px solid #ccc;
+    */
+}
+h2{
+    font-size: 18px;
+    line-height:18px;
+    color:#083772;
+    margin-bottom:15px;
+    font-weight:normal;
+}
+.currently_viewing{
+    font-size: 18px;
+    line-height:5px;
+    color:#083772;
+    margin-bottom:0px;
+    letter-spacing:1px;
+    font-weight:normal;
+}
+.current_project{
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height:12px;
+    color:#083772;
+    text-align:center;
+    margin-bottom:5px;
+    margin-top:5px;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+p{
+    margin:10px 20px;
+    line-height:18px;
+}
+
+/*input{
+    margin: 8px 20px;
+}
+*/
+#content{
+    margin-left:15px;
+}
+#buttonz{
+    margin-left:15px;
+}
+#myDiv{
+    border:2px solid #1F3E75;
+    background:#DFECFB;
+    margin:20px 50px;
+    padding:10px 20px;
+    width:200px;
+    text-align:center;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.cook_info_label{
+    color: gray;
+    margin:15px;
+}
+.cook_checkbox_special{
+    padding-left:10px;
+}
+.cook_centered_button{
+    align:center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align:center;
+    padding-left:25px;
+}
+.cook_contact_text{
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size:12px;
+    color:#000000;
+    letter-spacing:1px;
+    font-weight:normal;
+}
+.dragHighlight{
+    background:#f0f0f0;
+}
+.cookBackground{
+    background:#D3E1F1;
+}
+.cook-contactPanel .x-fieldset{
+    padding:1px;
+    margin-bottom:5px;
+}
+.usan_logo{
+    padding:10px;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size:32px;
+    color:#083772;
+    letter-spacing:1px;
+    font-weight:normal;
+    background-image: url(../images/USAN_logo1_smallpng.png) !important;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.usan_navtoolbar{
+    background:#dfe8f5;
+    border:0px;
+    vertical-align:middle;
+    /*color:#FF3300;*/
+    overflow:hidden;
+    height:32px;
+}
+.column-lines-enabled /*.x-grid-cell .x-grid-row */{
+    /*border-right-style: solid !important;*/
+    border-right-width: 1px !important;
+}
+.preview_pane{
+    padding:30px;
+    font-size:12px;
+    align:center;
+    /*text-align:center;
+    */
+    color:#083772;
+    letter-spacing:1px;
+    font-weight:normal;
+}
+.cook_contactButton .x-btn-mc, .cook_contactButton .x-btn-ml, .cook_contactButton .x-btn-mr, .cook_contactButton .x-btn-tc, .cook_contactButton .x-btn-tl, .cook_contactButton .x-btn-tr, .cook_contactButton .x-btn-bc, .cook_contactButton .x-btn-bl, .cook_contactButton .x-btn-br{
+    background-image: none;
+}
+.add{
+    background-image:url(../images/icons/add.gif) !important;
+}
+.option{
+    background-image:url(../images/icons/plugin.gif) !important;
+}
+.remove{
+    background-image:url(../images/icons/delete.gif) !important;
+}
+.perform{
+    background-image:url(../images/icons/cog_edit.png) !important;
+}
+.edit{
+    background-image:url(../images/icons/cog_edit.png) !important;
+}
+.tools{
+    background-image:url(../images/icons/cog.png) !important;
+}
+.open{
+    background-image:url(../images/icons/folder_go.png) !important;
+}
+.save{
+    background-image:url(../images/icons/save.jpg) !important;
+}
+.info{
+    background-image:url(../images/icons/information.png) !important;
+}
+.submit{
+    background-image:url(../images/icons/connect.png) !important;
+}
+.search{
+    background-image:url(../images/icons/user_add.png) !important;
+}
+.reset{
+    background-image:url(../images/icons/cross.gif) !important;
+}
+.load{
+    background-image:url(../images/icons/table_refresh.png) !important;
+}
+.table{
+    background-image:url(../images/icons/table.png) !important;
+}
+.accept{
+    background-image:url(../images/icons/accept.png) !important;
+}
+.up{
+    background-image:url(../images/up.GIF) !important;
+}
+.top{
+    background-image:url(../images/top.GIF) !important;
+}
+.bottom{
+    background-image:url(../images/bottom.bmp) !important;
+}
+.down{
+    background-image:url(../images/down.bmp) !important;
+}
+.date{
+    background-image:url(../images/icons/date.png) !important;
+}
+.buttonIcon{
+    background-image:url(../images/icons/buttonIcon.ico) !important;
+}
+.u-datefield-zindex{
+    z-index: 10;
+    width: 1000;
+}
+.x-table-layout td{
+    vertical-align:top;
+}
+.center-table-layout td{
+    vertical-align:center;
+}
+.padded-table td{
+    vertical-align:top;
+    padding: 10;
+}
+.padded-grid{
+    border:1px solid #99bbe8;
+    margin: 10;
+}
+.cook-normal-text{
+    font-size:10px;
+    color:#000000;
+    font-weight:normal;
+}
+.cook-red-text{
+    font-size:10px;
+    color:red;
+    font-weight:bold;
+}
+.cook-green-text{
+    font-size:10px;
+    color:green;
+    font-weight:normal;
+}
+.required .x-form-check-wrap{
+    font-weight:bold;
+    color:red;
+}
+.cook-text-right{
+    text-align:right;
+}
+.rmoney .x-form-field{
+    text-align:right;
+}
+.x-grid-row-summary .x-grid-cell-inner{
+    font-weight: bold;
+    font-size: 12px;
+}
+#loading-mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+    background-color: white;
+}
+#loading{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 2px;
+    z-index: 20001;
+    height: auto;
+    margin: -35px 0 0 -30px;
+}
+#loading .loading-indicator{
+    background: url(/images/Loading.gif) no-repeat;
+    color: #555;
+    font: bold 13px tahoma,arial,helvetica;
+    padding: 8px 42px;
+    margin: 0;
+    text-align: center;
+    height: auto;
+}

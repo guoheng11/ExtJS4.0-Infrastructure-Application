@@ -1,0 +1,13 @@
+C:\Users\sean.mercer\Documents\Visual Studio 2010\Projects\Cookbook\Cookbook\bin\Cookbook.dll
+C:\Users\sean.mercer\Documents\Visual Studio 2010\Projects\Cookbook\Cookbook\bin\Cookbook.pdb
+C:\Users\sean.mercer\Documents\Visual Studio 2010\Projects\Cookbook\Cookbook\bin\Newtonsoft.Json.dll
+C:\Users\sean.mercer\Documents\Visual Studio 2010\Projects\Cookbook\Cookbook\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\sean.mercer\Documents\Visual Studio 2010\Projects\Cookbook\Cookbook\obj\Debug\Cookbook.dll
+C:\Users\sean.mercer\Documents\Visual Studio 2010\Projects\Cookbook\Cookbook\obj\Debug\Cookbook.pdb
+M:\ExtJS4_Cookbook_SVN\Cookbook\bin\Cookbook.dll
+M:\ExtJS4_Cookbook_SVN\Cookbook\bin\Cookbook.pdb
+M:\ExtJS4_Cookbook_SVN\Cookbook\bin\ExcelLibrary.dll
+M:\ExtJS4_Cookbook_SVN\Cookbook\obj\Debug\ResolveAssemblyReference.cache
+M:\ExtJS4_Cookbook_SVN\Cookbook\obj\Debug\Cookbook.dll
+M:\ExtJS4_Cookbook_SVN\Cookbook\obj\Debug\Cookbook.pdb
+M:\ExtJS4_Cookbook_SVN\Cookbook\bin\ExcelLibrary.pdb

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=8">-->
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <title>CookBook</title>
+        <link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+        <link rel="stylesheet" type="text/css" href="css/Cookbook.css">
+        <!--<script type="text/javascript" src="extjs/ext.js">-->
+        </script>
+        <script type="text/javascript" src="extjs/ext-debug.js">
+        </script>
+        <script type="text/javascript" src="CookBook.js">
+        </script>
+		
+        
+    </head>
+    <body>
+    <div id="cookbook">
+    </div>
+    <!--[if IE]>
+        <script type="text/javascript"
+        src="app/view/mainview/CFInstallCustom.js"></script>
+        <style>
+        .chromeFrameInstallDefaultStyle {
+        width: 100%; /* default is 800px */
+        border: 5px solid blue;
+        }
+        </style>
+        <div id="prompt">
+        <!-- if IE without GCF, prompt goes here -->
+        </div>
+        <!--[if IE]>
+            <script>
+            // The conditional ensures that this code will only execute in IE,
+            // Therefore we can use the IE-specific attachEvent without worry
+            window.attachEvent("onload", function() {
+            CFInstall.check({
+            mode: "overlay",
+            node: "prompt"
+            });
+            });
+            </script>
+        <![endif]-->
+        <![endif]-->
+    </body>
+    <div id="loading-mask">
+    </div>
+    <div id="loading">
+        <div class="loading-indicator">
+            Loading... Please wait.
+        </div>
+    </div>
+</html>
